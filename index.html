@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stage 5 Reading Comprehension Pack: 20 Passages</title>
+<style>
+:root{--navy:#14284b;--navy2:#22407a;--teal:#1f7a8c;--bg:#f4f6fb;--card:#fff;--ink:#1c2433;--mute:#5a667d;--line:#d9dfec;--good:#16794a;--goodbg:#e6f5ed;--bad:#b3261e;--badbg:#fdeceb;--kw:#fff0a8;--kwb:#e0b800;--fs:1rem}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55;font-size:var(--fs)}
+header.bar{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20}
+.bar-in{max-width:1120px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.bar h1{font-size:1.6rem;line-height:1.2;margin:0 auto 0 0}
+@media(max-width:600px){.bar h1{font-size:1.2rem}header.bar{position:static}.bar-in a.brand img{width:44px;height:44px}}
+.bar .tools{display:flex;gap:6px;flex-wrap:wrap}
+button,.btn{font:inherit;cursor:pointer}
+.tb{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:6px 10px;font-size:.85rem}
+.tb:hover,.tb[aria-pressed="true"]{background:#fff;color:var(--navy)}
+main{max-width:1120px;margin:0 auto;padding:16px}
+.intro{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:14px}
+.intro h2{margin:0 0 6px;color:var(--navy);font-size:1.25rem}
+.intro p{margin:6px 0;color:var(--mute)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{border:1px solid var(--navy2);background:#fff;color:var(--navy2);border-radius:999px;padding:6px 14px;font-size:.9rem}
+.chip[aria-pressed="true"]{background:var(--navy2);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:160px}
+.card:hover,.card:focus-visible{border-color:var(--navy2);box-shadow:0 2px 10px rgba(20,40,75,.12)}
+.card .cov{width:calc(100% + 28px);margin:-14px -14px 4px;aspect-ratio:1/1;object-fit:cover;object-position:50% 35%;border-radius:13px 13px 0 0;display:block}
+.card .no{font-size:.8rem;color:var(--mute);font-weight:bold}
+.card h3{margin:0;font-size:1.02rem;color:var(--navy)}
+.badge{display:inline-block;font-size:.74rem;border-radius:6px;padding:2px 8px;background:#e8eefb;color:var(--navy2);font-weight:bold}
+.badge.n{background:#e3f3f1;color:#0f5d6b}
+.meter{height:6px;background:#e5e9f3;border-radius:6px;overflow:hidden;margin-top:auto}
+.meter i{display:block;height:100%;background:var(--teal)}
+.small{font-size:.82rem;color:var(--mute)}
+.btn{border:1px solid var(--navy2);background:var(--navy2);color:#fff;border-radius:8px;padding:8px 14px}
+.btn.ghost{background:#fff;color:var(--navy2)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn:focus-visible,.chip:focus-visible,.tb:focus-visible,.card:focus-visible,.tab:focus-visible,.kw:focus-visible,.vq:focus-visible,.wc:focus-visible,textarea:focus-visible,.cwi:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.top{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:10px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.tab{border:1px solid var(--navy2);background:#fff;color:var(--navy2);border-radius:10px 10px 0 0;padding:8px 14px;font-size:.92rem}
+.tab[aria-selected="true"]{background:var(--navy2);color:#fff}
+.panel{display:none}
+.panel.on{display:block}
+.layout{display:grid;gap:14px}
+@media(min-width:980px){.layout{grid-template-columns:1fr 1fr;align-items:start}.leftcol{position:sticky;top:64px;max-height:calc(100vh - 80px);overflow:auto}}
+.passage,.q,.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.passage h2{margin:0 0 4px;color:var(--navy);font-size:1.3rem}
+.passage .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.passage p{margin:0 0 .8em;font-size:1.05em}
+.passage h3.headline{font-size:1.15em;margin:.2em 0 .6em;color:var(--navy)}
+.passage h4{margin:1em 0 .3em;color:var(--navy2)}
+.passage ul,.passage ol{margin:0 0 .9em;padding-left:1.4em}
+.note{font-size:.85rem;color:var(--mute);border-left:4px solid var(--line);padding-left:10px;margin:8px 0}
+.banner{background:#eef6f8;border:1px solid #b9dbe3;border-radius:10px;padding:8px 12px;margin:10px 0;font-size:.9rem}
+.kwr{position:relative;display:inline}
+.kw{font:inherit;background:var(--kw);border:0;border-bottom:2px solid var(--kwb);border-radius:3px;padding:0 2px;color:inherit;cursor:pointer}
+.kw sup{font-size:.62em;font-weight:bold;color:var(--navy2);margin-left:1px}
+.kw[aria-expanded="true"]{background:#ffe066}
+.pop{position:fixed;left:0;top:0;z-index:2000;background:#fff;border:1px solid var(--navy2);border-radius:10px;padding:8px 12px;width:max-content;max-width:min(260px,80vw);box-shadow:0 4px 14px rgba(20,40,75,.2);font-size:.9rem;line-height:1.4;display:block;text-align:left}
+.pop .ar,.vbody .ar{display:block;font-family:"Noto Naskh Arabic","Segoe UI",Tahoma,Arial,sans-serif;font-size:1.3em;color:var(--navy);direction:rtl;text-align:right}
+.pop .en,.vbody .en{display:block;color:var(--mute)}
+
+.cast{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.sp{display:inline-block;font-weight:bold;border-radius:6px;padding:0 7px;color:#fff;font-size:.9em;letter-spacing:.02em}
+.sc0{background:#b3261e}.sc1{background:#1f5fbf}.sc2{background:#16794a}.sc3{background:#8a4fbf}.sc4{background:#b36a00}.sc5{background:#0f7b8a}
+p.line{border-left:5px solid transparent;padding-left:8px}
+p.line.l0{border-color:#b3261e}p.line.l1{border-color:#1f5fbf}p.line.l2{border-color:#16794a}p.line.l3{border-color:#8a4fbf}p.line.l4{border-color:#b36a00}p.line.l5{border-color:#0f7b8a}
+.sd{color:#5a667d;font-style:italic}
+.scene{background:#f1efe6;border:1px dashed #b5ad8c;border-radius:8px;padding:8px 10px;font-style:italic}
+.media{border:2px dashed var(--line);border-radius:12px;padding:10px;margin:10px 0;background:#fafbfe}
+.phbtn{border:1px dashed #8a93a8;background:#f1f3f8;color:#5a667d;border-radius:999px;padding:6px 14px;font:inherit;font-size:.88rem;cursor:not-allowed}.slot.pp{display:block;margin:0 0 4px}.slot.pp img{max-height:110px;margin:0 auto}.slot.pp.missing,body.teacher .slot.pp.missing{display:none!important}.slot{margin:4px 0;font-size:.85rem}.slot.missing{display:none}.slotname{display:none;font:.72rem monospace;color:#7a6a20}body.teacher .slotname{display:block}.media.empty{display:none}body.teacher .media.empty{display:block}.media{border:0;background:transparent;padding:4px 0}.slot img{max-width:100%;max-height:260px;border-radius:8px;display:block;margin-top:4px}.slot audio{width:100%;margin-top:4px}.media h4{margin:0 0 6px}
+.media img{max-width:100%;max-height:260px;display:block;margin-top:6px;border-radius:8px}
+.media audio{width:100%;margin-top:6px}
+.mrow{display:flex;gap:10px;flex-wrap:wrap}
+.mrow>div{flex:1 1 220px}
+.vocab{margin-top:14px;border-top:2px solid var(--line);padding-top:10px}
+.vocab h3{margin:0 0 6px;color:var(--navy);font-size:1.05rem}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px}
+.vk{border:1px solid var(--line);border-radius:10px;background:#fffdf0}
+.vq{width:100%;text-align:left;background:transparent;border:0;padding:6px 10px;font-weight:bold;color:var(--navy);display:flex;justify-content:space-between;align-items:center}
+.vq span{background:var(--navy2);color:#fff;border-radius:50%;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem}
+.vbody{padding:0 10px 8px}
+.qs{display:grid;gap:12px}
+.qh{display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap}
+.qar{border:1px solid var(--navy2);background:#fff;color:var(--navy2);border-radius:50%;width:26px;height:26px;font-weight:bold;padding:0}.qar[aria-expanded="true"]{background:var(--navy2);color:#fff}.qab{background:#fffdf0;border:1px solid var(--kwb);border-radius:10px;padding:8px 12px;margin:2px 0 8px;font-family:"Noto Naskh Arabic","Segoe UI",Tahoma,Arial,sans-serif;font-size:1.2em;color:var(--navy);direction:rtl;text-align:right}.rag{display:inline-block;border-radius:6px;padding:0 8px;font-weight:bold;font-size:.85em;color:#fff}.rag.green{background:#16794a}.rag.amber{background:#b36a00}.rag.red{background:#b3261e}.qn{background:var(--navy);color:#fff;border-radius:50%;min-width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:bold}
+.tag{font-size:.75rem;background:#eef1f8;color:var(--navy2);border-radius:6px;padding:2px 8px}
+.qt{margin:.2em 0 .6em;font-weight:bold}
+.opts{display:grid;gap:6px}
+.opts.two{grid-template-columns:1fr 1fr}
+.opt{display:flex;gap:8px;align-items:flex-start;border:1px solid var(--line);border-radius:10px;padding:8px 10px;cursor:pointer;background:#fff}
+.opt:hover{border-color:var(--navy2)}
+.opt.good{border-color:var(--good);background:var(--goodbg)}
+.opt.bad{border-color:var(--bad);background:var(--badbg)}
+.fb{margin-top:8px;padding:8px 10px;border-radius:10px;font-size:.95rem}
+.fbh{margin-bottom:4px}.fbrow{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid rgba(0,0,0,.1)}.fbsc{flex:none;font-weight:700;padding:2px 8px;border-radius:8px;background:#fff}.fbsc.ok{color:#0d6b3f}.fbsc.mid{color:#8a6100}.fbsc.no{color:#a3231b}
+.fb.good{background:var(--goodbg);color:#0d4f30}
+.fb.bad{background:var(--badbg);color:#7c1a15}
+.fb.warn{background:#fff6dc;color:#6b4e00}
+.row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;align-items:center}
+textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit;resize:vertical}
+.model{margin-top:8px;border:1px solid var(--teal);background:#eaf6f8;border-radius:10px;padding:10px 12px}
+.model ul{margin:.4em 0 0;padding-left:1.2em}
+.ans{display:none;margin-top:8px;border:1px dashed var(--good);background:#f3fbf6;border-radius:10px;padding:8px 10px;font-size:.92rem}
+body.teacher .ans{display:block}
+.box h3{margin:0 0 6px;color:var(--navy)}
+.box ul{margin:.3em 0 .6em;padding-left:1.3em}
+.box p{margin:.4em 0}
+.checks label{display:flex;gap:8px;align-items:flex-start;margin:4px 0}
+.wsgrid{display:grid;gap:2px;width:max-content;max-width:100%;margin:6px 0}
+.wc{width:clamp(22px,6.2vw,36px);height:clamp(22px,6.2vw,36px);border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:bold;font-size:clamp(.7rem,2.6vw,1rem);padding:0;border-radius:6px}
+.wc.sel{background:#ffe066;border-color:var(--kwb)}
+.wc.f{background:#bfe8cf;border-color:var(--good)}
+body.teacher .wc.sol:not(.f){background:#dff3e6;border-color:#8cc9a4}
+.wsl{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.wsl span{border:1px solid var(--line);border-radius:999px;padding:3px 12px;background:#fff;font-weight:bold;letter-spacing:.04em;font-size:.9rem}
+.wsl span.f{background:var(--goodbg);border-color:var(--good);text-decoration:line-through;color:var(--good)}
+.cwwrap{overflow:auto;max-width:100%;padding:4px}
+table.rub{border-collapse:collapse;width:100%;margin:8px 0}table.rub th,table.rub td{border:1px solid var(--line);padding:5px 8px;text-align:left;font-size:.88rem;vertical-align:top}table.cw{border-collapse:collapse}
+table.cw td{width:36px;height:36px;padding:0;position:relative}
+table.cw td.cb{background:transparent}
+table.cw td.cc{border:1px solid #6f7b94;background:#fff}
+.cw .num{position:absolute;top:0;left:2px;font-size:.62rem;color:var(--mute);pointer-events:none;z-index:2}
+.cwi{width:100%;height:100%;border:0;background:transparent;text-align:center;font:bold 1.05rem Arial;text-transform:uppercase;padding:6px 0 0;border-radius:0;position:relative;z-index:1}
+.cwi.ok{background:#bfe8cf}
+.cwi.bad{background:#f7c9c5}
+.sl{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font:bold 1.05rem Arial;color:#16794a;opacity:.55;pointer-events:none;padding-top:6px;z-index:0}
+body.teacher .sl,.cwshow .sl{display:flex}
+.clues{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:10px}
+.clues h4{margin:0 0 4px;color:var(--navy)}
+.clues ol{margin:0;padding-left:0;list-style:none}
+.clues li{margin:3px 0;font-size:.95rem}
+.clues li b{color:var(--navy2)}
+.clues li button{background:none;border:0;padding:0;text-align:left;color:inherit}
+.clues li button:hover{text-decoration:underline}
+details.about{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin-top:16px}
+details.about summary{cursor:pointer;font-weight:bold;color:var(--navy)}
+details.about table{border-collapse:collapse;margin:8px 0;width:100%}
+details.about th,details.about td{border:1px solid var(--line);padding:6px 8px;text-align:left;font-size:.88rem;vertical-align:top}
+a.brand{display:inline-flex;flex:none;line-height:0;margin-right:2px}a.brand img{border-radius:50%;background:#fff}.fbrand{margin:0 0 8px}footer a{color:var(--navy2);font-weight:bold}
+.more{margin:8px 0 4px}.more>summary{cursor:pointer;font-weight:bold;color:var(--navy2);padding:4px 0}
+.more .mi{margin-top:8px;border-top:1px solid var(--line);padding-top:8px}.mi h3{margin:12px 0 4px;font-size:1.02rem;color:var(--navy)}.mi p{margin:6px 0;color:var(--ink)}
+.mi figure{margin:8px 0}.mi figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;display:block}.mi figcaption{font-size:.85rem;color:var(--mute);margin-top:4px}
+.mi .key{display:inline-block;width:16px;height:12px;background:#ffde3c;border:2px solid #e66e00;vertical-align:middle;margin-right:6px}
+.mi table{border-collapse:collapse;width:100%;font-size:.9rem}.mi td,.mi th{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top}.mi td:first-child{white-space:nowrap;font-weight:bold}
+.card.lk{opacity:.95;border-style:dashed;position:relative}.card.lk .cov{filter:grayscale(.6) brightness(.9)}
+.lkb{display:inline-flex;align-items:center;gap:5px;background:#fff6dc;color:#6b4e00;border:1px solid #e8c46a;border-radius:999px;padding:2px 10px;font-size:.8rem;font-weight:bold;width:max-content}
+.demo{background:#fff6dc;border:1px solid #e8c46a;border-radius:14px;padding:12px 16px;margin-bottom:14px;color:#4d3a00}.demo b{color:#3b2c00}
+.demo .btn{margin-top:6px;text-decoration:none;display:inline-block}
+#modal{position:fixed;inset:0;background:rgba(10,20,40,.6);display:flex;align-items:center;justify-content:center;z-index:99;padding:16px}#modal[hidden]{display:none}
+#modal .mb{background:#fff;border-radius:16px;max-width:440px;width:100%;padding:20px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+#modal h3{margin:0 0 6px;color:var(--navy)}#modal p{margin:6px 0}
+.par h3{margin:0 0 6px;color:var(--navy)}.par .box{margin-bottom:12px}.par ol,.par ul{margin:6px 0 6px 20px;padding:0}.par li{margin:4px 0}
+.par .say{background:#eef4ff;border-left:4px solid var(--navy2);padding:8px 12px;border-radius:8px;margin:6px 0}
+.par table{border-collapse:collapse;width:100%}.par td,.par th{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+footer{max-width:1120px;margin:0 auto;padding:10px 16px 30px;color:var(--mute);font-size:.82rem}
+@media print{
+ header.bar,.filters,.row,.no-print,.top,.tabs,footer,details.about{display:none!important}
+ body{background:#fff;font-size:11pt}
+ .panel{display:block!important;break-before:page}
+ .panel.p-read{break-before:auto}
+ .layout{display:block}
+ .leftcol{position:static;max-height:none;overflow:visible}
+ .passage,.q,.box{border:1px solid #999;break-inside:avoid}
+ .kw{background:#ffec99}
+ .kw sup{display:none}
+ .pop{display:none!important}
+ .vk .vbody[hidden]{display:block!important}
+ .vq span{display:none}
+ .opt{border-color:#999}
+ textarea{min-height:90px}
+ .model{display:none}
+ body.teacher .ans{display:block}
+ .wc{border-color:#999}
+}
+
+.agel{margin:2px 0 0;color:var(--mute);font-size:1rem;font-weight:bold}
+.namebox{margin:10px 0 0}.namebox input{padding:8px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;width:min(100%,320px);margin-left:6px}
+.tonly{display:none!important}body.teacher .tonly{display:block!important}
+body:not(.teacher) .tag{display:none}
+.tmenu{position:relative}.tmenu summary{list-style:none;cursor:pointer}.tmenu summary::-webkit-details-marker{display:none}
+.tmenu-in{position:absolute;right:0;top:calc(100% + 6px);background:var(--navy);border:1px solid #4a5a85;border-radius:10px;padding:8px;display:flex;flex-direction:column;gap:6px;z-index:30;min-width:150px}
+.fab{display:none}
+@media(max-width:979px){.fab{display:block;position:fixed;right:14px;bottom:16px;z-index:15;background:var(--navy2);color:#fff;border:0;border-radius:999px;padding:12px 18px;font:inherit;font-weight:bold;box-shadow:0 4px 14px rgba(0,0,0,.3)}}
+.wsgrid{margin:6px auto}.wc{width:clamp(24px,6.2vw,44px);height:clamp(24px,6.2vw,44px)}
+@media print{.fab,.tmenu{display:none!important}}
+
+.trwrap{overflow:auto;max-width:100%}
+.trt{border-collapse:collapse;font-size:.85rem;min-width:max-content}
+.trt th,.trt td{border:1px solid var(--line);padding:4px 6px;text-align:center;white-space:nowrap}
+.trt th{background:#eef1f8;position:sticky;top:0}
+.trt .trn{width:150px;padding:6px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.trc{min-width:44px}.tr-green{background:#dff3e4}.tr-amber{background:#fff1cc}.tr-red{background:#fbdcdc}
+.tra td{background:#f6f7fb}.trb{padding:4px 10px;font-size:.8rem}
+.treg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
+.trf{border:1px solid var(--line);border-radius:8px;padding:6px 8px;margin:0}.trf legend{font-size:.78rem;font-weight:bold;color:var(--navy)}
+.trf label{display:block;font-size:.85rem;margin:3px 0}.trf input{width:58px;padding:4px;border:1px solid var(--line);border-radius:6px;font:inherit}
+</style>
+</head>
+<body>
+<header class="bar">
+ <div class="bar-in">
+  <a class="brand" href="https://fluentry-uk.com" target="_blank" rel="noopener" aria-label="Fluentry UK website"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAwFBMVEXmW2Lem57V7fVSYJPv0tG4uLjt7vTsHisALVxhg52fna+Zq8GPcY/lOkUySIXt7/J////TfITmwLs3QX5qOGd/v7+zZHuq1NTwvcD//wD9/f4AAAAPSXL+/v7o6/B5lqyOp7kBO2e3xtKnuchPd5Xa4ujI09toiaM3ZIbS2+IaUXjy8/bx8/aDnLGcssLy9PYjVnzy8/dFbI5bgZzz9fjCzdfw8vUtXIGw///MzMzt7fPsJTHn5urt7vPW1tbs7vLZ0TvaAAAAQHRSTlP//wf//wNc//////////+UAv////8E/wb/Af4A/wT9////////////////atP//yv/r///mP9X/wMFL/8Nzgan3Iwg1wAACYxJREFUeNrNmwljo6oWgEnTTveZO/ftFAFBRW201iRN9/v//9U7B83qEtNo3+PemTEufJwjZwGB3HUsjvPi2IP3eyh0o+Dv9+KeF8fpWh/pyrXMh6fJxwetKR8fk6cHZ3VjX2AHBPl0ZrNa5rpMZjPn097cD9hW9DShncrkafnEseAzqOThsSPWoh8fAH12JBjb/jCjB5bZw36pSf/Ybug28AsqmX6xoMJfvgSGBn8dW6JbhCYthvs0oUcV7OHOgWBo6uuMHl1mr41CkybuD9pL+dFEJvVqPrnvh0v5/Um9ukk995H2Vh7ryaSO60xoj+XDqSOTGu497bnc15BJ1Wv0zsUu9rIP7AzBrZN5B/w8DBfJz23gM2cgLpB3IiXZsSM6WHnf1jbZ4r4/Dgd+3CZvgJ0TZ0AukAFQC/7syz83G9VnHdhxHujA5XUjYJANR9ntaR20XfXVdaLov0c80Or0NIi2r244zxX4xOkYf1PVdvWffx8vfmpyPsrHN7ej8Xi+dfWXc7ILfrl76qgv2Qq+IuR3okbn5HpE/kxNsiPy08p3kqWiX7tGJKPbwm+e3/wmoz/fbkdkdDoakdOdbOhhqewluLslhbLt6ng8Vqcj8vb2dkvO4c9pxaa2wAf0aJ95bRKbKxATuW/nZDQ6rXbEh5JMytjwV1ewdOOoBUzOsQD2lpBRkOSVe/8qo4UFO390N2GPsbaXPPoNcsL7PSfzG0LIDa8a8x/OCnzWXWAqk6StW0szFiNylbyRq3EO6FNaFflsCYYhQ3fvM/W8Non1eAzcn+Pbt9H4bz9/3lTBtOjY5LAuTRVj7pS33DDnp6d6PgeFK3Vd6+WKjk2wZ3UXOAoZFHGcy7YiE9R0g8B+jcChMaDsI+MjdmyUuCGN5jWdSHqJMCbnxw3mHAt2mrx0VOOictfNmMuC40R+AihxnJMGLy1YVTDPlX4QsgYXAqGIdxtbOA5pjsOeW60/Z1RR4daB/STwpPR83YENUJB41giuajR0JeVhnaq1zqVIpJFhwPeiZ1biXw2egrFM1TjMMGNxtb/7YSJVEAVBKmTu7wP/QokbArFwwWAzXgkRaMdVc5JSJ1wBN1Dcgxbs69cPDmnwHjwGQOzKjmCRz7lWUPRcc5nL/T6ENBhTgADmik5gP5EBQm0JVCp1VO9/NgyKNHgPz4JZFnWSWFymAXClTKTWKhIeiKxc2eZDyN1Ho6ZRZIhE3N8HDqT2lU6TyzA0SJ7LAA0ga+7dH40SLwowU1gtWovfAtZeAoqWl3Apl/Cq00uPR8XDzRLXj0t1KTEGIrNAz5Ha80kNWPmQ8kL+Lk0GlxJ4yxFInLqx2xLF7hvAYclFgwrBdfIStgb7fBWwptITQNbSY6GQqVLwG8wxbksLm8D5Ehzice7lZSViBTZynf35KgWJtfYuPQn2BO9Y0UsW48MHgVXuLTXNYiEytlbvSmLFMlkUD7Qi85TLufa0EeqKK88UZrFoA/O6DJZtlPJHiGaqvGUjtBt7UywmZJmvoAFcp9NACh1JLRPf6ixry4PrMkUWs/pSNsKCs1UzM+hdoVaBADfiRaBxUb6suCVa1IF1HTguCh4Vql7wJRiO5tChVOgr6kkDpmU9UMyyA8C+TEToMnenbJ9gYZi5bBEuQvif4VGeY2PDDMx/wcI8DEN8Ai5gyU3NCHMXHBhhRCKE/bP+B4+S9fHWhQ7FyE6q/o7C/3/Avs8xKvjWN3MbnNBJ4Wm+9FcRHsAZex/+zYvzxUPFP6tKeMS7gP0yDMfWFIwLLjpw88K0XV+5GCfFhUou7H0GRzRg4nOGaZhwja0zw/TUcxXFbq0robWhVzM2NTAsi9kGOARwaKZTqIXlFqw8SMmmntZuCK6L+cb1aFSaD49X4BgTiqBB1XwHvCgejrfBF6K0cBf9P4YqW70GIGT5msfu3LjFMHJD4kWQubqjHUNqOVdVsAvJq0ZO5gbyIrVy+Rbs6xgYoJJlMNoAx4vGNGQ3SICqwfJ9WgEz98Kj+kJK17MSl+Bl0MZAGlEO7kfRDVVnLOkYnXwWyzStkdhgz9WgaAgKG2A3FMXLsT3LLzrmWtWKNai6Bly84yyOwHwS1+NQ5RTBOC5SUC3mnxYcF6oGhLEBE+W2NhcySYMMFADhqWmupgKGVMmCMRDBAI25MXhlVcRhN1AXBqMCvjjOrMQXITyCv8WFWYdVHFJ6eAuHZmV+LXgn2ePT4nkD0RasKjCQOII9gPnAf1FkUy/hoc+f4ozE3IN3eI2BX5dZmZ3u9EI8b+vixpMHpLdDl0ljejs02KkMYdQydKoI3o31OkHgzymHoSAvBiYrl6OW/YavT/pq65UGQdMQ5u51y3cpo3gUUT/wJZCjJIWubOY6pQHkVQquiEDayiDlFdfKD6BF0J3mVMB8AMYUkyobU2iEd/mXUvA5dHVeGbTtDFPVNFJGaIlDEZu8CXg4igRmr6mcAsdLdSJlBMkdWGhk4A5JIYGXQkbY60QaSAWhPzWQAELzqYBMH/5Uhqk7A3MlfByDYGUSR2G+hNYaHdrkEYSGPq0ETBzCeawshTZwgZPnIoLpANA9eK5ESKFSTYWhEXj2FH552xqfVacigstrPVdaSJAQhkNplMLsD4yHrvGnBUtfGw0ygWdJtBBpClJFAoYSQiXQSjiCFqGGqJbUN2IOlXGjVHUqYmfyBd8G5sl01WH41rWNE5zuXOFbR2J1/UrXTb581lhyFPWR3tQcFa/4EyRunmAbrtgJNpy8nXy399gziTrYR8ZyEvWgefI+ynLa+KCJ8l6+qq5m6MFtfrfAh38MObpsfAyBzz/fKHL5Lbf44PUPEJl/l8DPm1/anG/q2Bw+8T1vf9T8JpF3PmqiLX+L+6p8xj3gw/WRXvql7lP94MqeVT/VF4sThia/1yxOgP71+j9ZjnF39y9YgMKHtKSGBSjFkhs+HLdxyc2gi4x4yyIjSx6og0GlJ83LqsqFZHwQbutCsnLpHB+C2750rlwsyAfgOvuXR/7omcw7LY/sX2becUFouQSW8964k45LYMtFv/2Q+SGLfpfLnHk/aj5gmfNqYfeRaG671X+cA5ey4z6Fo/TN7a6Fw5ayrxfvfxnNv7Z4H8nPxXaFL6F5sV3h2Tlqg8bBaH7UBo2NLSn8ELS9GfYpHLElZXM3TFe2ve3oTTjLbUevdtvRXnZxw+TxtYdtRzsbrThvoi8v9LfRanNr2WTN4FVm71vL1pvpHNhMN6kd6sDpHwNspmvdPsi/tn3wv1oPGm/3UypLAAAAAElFTkSuQmCC" alt="Fluentry UK logo" width="60" height="60"></a>
+  <h1>Stage 5 Reading Comprehension Pack: 20 Passages</h1>
+  <div class="tools">
+   <button class="tb" data-act="home">All passages</button>
+   <button class="tb" data-act="parents">For parents</button>
+   <button class="tb" data-act="fsm" aria-label="Smaller text">A-</button>
+   <button class="tb" data-act="fsp" aria-label="Larger text">A+</button>
+   <button class="tb" data-act="send">Send my marks</button>
+   <details class="tmenu"><summary class="tb">Teacher tools</summary><div class="tmenu-in">
+    <button class="tb" data-act="track">Class tracker</button>
+    <button class="tb" data-act="key">Answer key</button>
+    <button class="tb" id="tbT" data-act="teacher" aria-pressed="false">Teacher view</button>
+    <button class="tb" data-act="print">Print</button>
+   </div></details>
+  </div>
+ </div>
+</header>
+<main id="app"></main>
+<div id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mT"><div class="mb"><h3 id="mT"></h3><p id="mP"></p><div class="row"><a class="btn" id="mBuy" href="#" target="_blank" rel="noopener">Get the full pack on WhatsApp</a><button class="btn ghost" data-act="mclose">Close</button></div></div></div>
+<footer>
+ <p class="fbrand"><span><b>Fluentry UK</b> &middot; English Skills You Can Use Every Day &middot; <a href="https://fluentry-uk.com" target="_blank" rel="noopener">fluentry-uk.com</a></span></p>
+ Original practice material aligned to Cambridge Primary English Stage 5 reading objectives. It is not produced or endorsed by Cambridge University Press &amp; Assessment.
+</footer>
+
+<script>
+const P=[{"id":1,"t":"The Lantern on Salt Rock","g":"Adventure story","c":"F","note":"An original story written for this pack.","x":"The wind howled round the old lighthouse like a hungry wolf. Nour pressed her nose to the window and watched the waves smash against Salt Rock, again and again.\n\n'Grandpa will be back from the village before the worst of it,' she told herself. But the clock on the wall said half past nine, and the path across the causeway was already vanishing under the sea.\n\nThen the great lamp above her head flickered. Once. Twice. Then it went dark.\n\nNour's stomach tightened. Somewhere out in the blackness, fishing boats were counting on that light to find their way home. Grandpa always said, 'A lighthouse that sleeps is a promise that breaks.'\n\nShe stopped and took a slow breath. Beside the telephone hung the storm-plan card that Grandpa had written. At the bottom he had added: 'Make your plan, then trust in Allah.' Nour read the card aloud. 'Torch. Spare batteries. Harbour office number.'\n\nShe grabbed the torch from its hook and the tin of spare batteries, and began to climb. Ninety-nine steps rang beneath her trainers. At step seventy, the torch beam died. Nour did not panic. She sat on the stair, swapped the batteries by feel, and the beam sprang back.\n\nAt the top, she found the problem at once: the switch had been knocked loose by the storm. With trembling fingers, she pushed it back into place.\n\nThe lamp hummed, brightened and swept its golden beam across the sea. Nour phoned the harbour office to say the light was working again. Far below, a small boat turned towards it. For the first time that night, she wasn't afraid.","sk":[{"n":"Respond to a power cut","what":"Keep lighting, phone charging, food safety and ventilation plans ready.","act":"Create a power-cut checklist.","safe":"Never use charcoal grills or generators indoors."}],"tip":"Make a power-cut checklist with an adult: where the torch is kept, where the spare batteries are, and which phone numbers to call. Never use a charcoal grill or a generator indoors.","qr":[{"ref":"Quran 3:159","mean":"When you have made a decision (a plan), put your trust in Allah. Grandpa's card in the story gives this meaning in simple words."}],"v":[{"w":"flickered","ar":"ومض / تذبذب","d":"shone unsteadily, on and off"},{"w":"causeway","ar":"طريق مرتفع فوق الماء","d":"a raised path or road across water or wet ground"},{"w":"vanishing","ar":"يختفي","d":"disappearing; going out of sight"},{"w":"tightened","ar":"انقبض / شدّ","d":"became tense or squeezed"},{"w":"spare","ar":"احتياطي","d":"kept ready in case you need another one"},{"w":"panic","ar":"يذعر / ذعر","d":"sudden, wild fear"},{"w":"trembling","ar":"مرتجفة","d":"shaking a little, from fear or cold"},{"w":"trainers","ar":"حذاء رياضي (حذاء الجري)","d":"running shoes; shoes for sport (the UK word)"},{"w":"swept","ar":"مسح / اجتاح","d":"moved across in a long, smooth line"},{"w":"beam","ar":"شعاع","d":"a line of light"}],"wr":{"type":"Diary entry","prompt":"Write Nour's diary entry for the next morning. Say what happened, how she felt, and one thing she will add to the storm-plan card.","plan":["Beginning: what went wrong in the storm","Middle: what Nour did and how she felt","End: one new idea for the storm-plan card"],"chk":["Wrote in the first person ('I')","Put the events in order"],"len":"60 to 100","m":"Friday. Last night the storm put the lamp out. I was frightened, but I read Grandpa's card and made myself follow it. The torch died on the stairs, so I changed the batteries in the dark. I fixed the switch and phoned the harbour office. Today I am proud. I will add a second torch to the card."},"q":[{"k":"mc","s":"RET","q":"What time did the clock show when Nour saw that the path was vanishing?","o":["Quarter to ten","Half past nine","Ten o'clock","Nine o'clock"],"a":1,"e":"The text says the clock showed 'half past nine'.","ar":"كم كانت الساعة على الحائط حين لاحظت نور أن الطريق بدأ يختفي؟"},{"k":"mc","s":"RET","q":"What had stopped the lamp from working?","o":["Grandpa had turned it off","The bulb had burst","The switch had been knocked loose by the storm","A boat had hit the rock"],"a":2,"e":"At the top Nour found 'the switch had been knocked loose by the storm'.","ar":"ما الذي أوقف عمل المصباح؟"},{"k":"mc","s":"VOC","q":"What does 'vanishing' mean in the second paragraph?","o":["Getting wider","Becoming warmer","Being mended","Disappearing"],"a":3,"e":"The path was going out of sight under the sea, so it was disappearing.","ar":"ماذا تعني كلمة \"vanishing\" (يختفي) في الفقرة الثانية؟"},{"k":"mc","s":"INF","q":"Why did the lamp matter so much to Nour?","o":["Fishing boats needed its light to get home safely","Grandpa had asked her to polish it","She wanted to read by it","It kept the lighthouse warm"],"a":0,"e":"The text says boats 'were counting on that light to find their way home'.","ar":"لماذا كان المصباح مهمًا جدًا لنور؟"},{"k":"mc","s":"INF","q":"What does 'for the first time that night, she wasn't afraid' suggest?","o":["She had fallen asleep","Grandpa had come home","She no longer cared about the boats","Fixing the problem made her feel calmer and braver"],"a":3,"e":"She was afraid until she solved the problem and saw the boat turn towards the light.","ar":"ماذا توحي عبارة \"للمرة الأولى تلك الليلة لم تكن خائفة\"؟"},{"k":"mc","s":"STR","q":"Why does the writer begin with the wind howling 'like a hungry wolf'?","o":["To make the setting feel dangerous","To list facts about wolves","To give instructions","To introduce Grandpa"],"a":0,"e":"The comparison builds a frightening mood for the whole story.","ar":"لماذا تبدأ الكاتبة بالرياح التي تعوي \"كذئب جائع\"؟"},{"k":"mc","s":"GRM","q":"Which sentence turns 'Grandpa will be back from the village before the worst of it' into reported speech?","o":["She told herself, Grandpa would be back from the village.","Grandpa would be back, she told herself that.","She told herself that Grandpa will be back from the village before the worst of it?","She told herself that Grandpa would be back from the village before the worst of it."],"a":3,"e":"In reported speech, 'will' changes to 'would' and the speech marks are removed.","ar":"أي جملة تحوّل كلام الجد \"Grandpa will be back...\" إلى كلام منقول (reported speech)؟"},{"k":"mc","s":"LIF","q":"Which item from the storm-plan card helped Nour when the torch beam died on the stairs?","o":["The harbour office number","The hook by the door","The tin of spare batteries","The clock on the wall"],"a":2,"e":"She swapped the batteries and the beam came back. A plan works because the items are ready in advance.","ar":"أي عنصر من بطاقة خطة العاصفة ساعد نور حين انطفأ شعاع المصباح اليدوي على الدرج؟"},{"k":"mc","s":"RET","q":"True or false? Nour climbed ninety-nine steps to reach the lamp.","o":["True","False"],"a":0,"e":"The text says 'Ninety-nine steps rang beneath her trainers.'","ar":"صح أم خطأ؟ صعدت نور تسعًا وتسعين درجة للوصول إلى المصباح."},{"k":"mc","s":"INF","q":"True or false? Nour waited at the bottom of the stairs for Grandpa to fix the lamp.","o":["True","False"],"a":1,"e":"She climbed up and fixed the switch herself.","ar":"صح أم خطأ؟ انتظرت نور أسفل الدرج ليصلح جدها المصباح."},{"k":"mc","s":"LIF","q":"True or false? In a power cut, it is safe to use a charcoal grill inside the house to keep warm.","o":["True","False"],"a":1,"e":"This is not in the story. The safety advice is never to use charcoal grills or generators indoors, because of dangerous fumes.","ar":"صح أم خطأ؟ من الآمن استخدام شواء الفحم داخل البيت أثناء انقطاع الكهرباء."},{"k":"op","s":"INF","q":"Why do you think Nour read the storm-plan card aloud?","m":"Reading it aloud helped her to calm down and take the steps one at a time. It also kept her mind on what to do instead of how scared she felt.","c":["Gives a sensible reason","Links the reason to Nour's feelings"],"ar":"لماذا تظن أن نور قرأت بطاقة الخطة بصوت عالٍ؟"},{"k":"op","s":"RES","q":"Would you have climbed the stairs alone in the dark? Give two reasons.","m":"I think I would, because the boats needed the light and Nour had a plan. However, I would be nervous, so I would also have phoned for help first.","c":["Gives a clear opinion","Gives two reasons"],"ar":"هل كنت ستصعد الدرج وحدك في الظلام؟ اذكر سببين."},{"k":"op","s":"QUO","q":"Find a sentence that shows Nour stayed calm when the torch beam died.","m":"'Nour did not panic.'","c":["Gives a correct sentence from the text","The sentence shows she stayed calm"],"ar":"جد جملة تبيّن أن نور بقيت هادئة حين انطفأ شعاع المصباح."},{"k":"op","s":"LIF","q":"List three things you would put on a power-cut checklist at home. Explain why one of them matters.","m":"Torch, spare batteries and a charged phone or power bank. The spare batteries matter because a torch with no power is no use in the dark.","c":["Lists three sensible items","Explains one of them"],"ar":"اذكر ثلاثة أشياء ستضعها في قائمة انقطاع الكهرباء في بيتك، واشرح أهمية واحد منها."}],"wcount":271},{"id":2,"t":"Inside a Honey Bee Hive","g":"Non-chronological report","c":"N","x":"A honey bee hive is one of the busiest homes in nature. A single hive can hold tens of thousands of bees, and every one of them has a job.\n\n## The queen\n\nEach hive has one queen. Her main job is to lay eggs, and at the peak of summer she can lay up to 2,000 eggs in a single day.\n\n## The workers\n\nWorkers are all female. Young workers clean the cells and feed the larvae. Older workers build wax comb, guard the entrance and fly out to collect nectar and pollen from flowers.\n\n## The drones\n\nDrones are male bees. Their main job is to mate with a queen from another hive.\n\n## Communication\n\nWhen a worker finds a good patch of flowers, she returns to the hive and performs a 'waggle dance'. The direction of her dance tells other bees which way to fly, and how long she waggles tells them how far to go.\n\n## Why bees matter\n\nAs bees travel from flower to flower, they carry pollen with them. This helps many plants to make seeds and fruit, including crops that people eat.\n\n## Honey and health\n\nBees turn nectar into honey. People enjoy honey on bread and some use it for a sore throat. Honey is a food, not a medicine, so ask a pharmacist before using it as a remedy. Never give honey to a baby under one year old, because it can make them seriously ill.","sk":[{"n":"Use honey for cough relief appropriately","what":"Understand that honey may ease cough in some people, but is not for infants under 1 year.","act":"Check suitability and medicine interactions with a pharmacist if needed.","safe":"Never give honey to a child under 12 months; seek care for concerning symptoms."},{"n":"Understand evidence levels for home remedies","what":"Distinguish traditional use, plausible mechanisms, clinical evidence and proven treatment.","act":"Check a remedy against a trusted health service or pharmacist before use.","safe":"Natural does not automatically mean safe or effective."}],"tip":"Ask a pharmacist or doctor what helps a cough. Check the label on any honey product and remember: no honey for babies under one year.","qr":[{"ref":"Quran 16:68-69","mean":"Allah inspired the bee to make homes, to eat from the fruits, and from its body comes a drink of different colours in which there is healing for people. The verse points us to think about how bees live.","note":"The verse says honey has healing for people. Medical advice today is to treat honey as a food and ask a pharmacist about remedies (see the Honey and health section)."}],"v":[{"w":"hive","ar":"خلية النحل","d":"the home where a group of bees lives"},{"w":"queen","ar":"الملكة","d":"the female bee that lays all the eggs"},{"w":"larvae","ar":"يرقات","d":"young insects that have just hatched from eggs"},{"w":"comb","ar":"قرص العسل","d":"the wax cells that bees build to store honey and raise young"},{"w":"nectar","ar":"الرحيق","d":"the sweet liquid inside flowers"},{"w":"pollen","ar":"حبوب اللقاح","d":"the fine powder inside flowers that helps plants make seeds"},{"w":"drones","ar":"ذكور النحل","d":"male bees"},{"w":"communication","ar":"التواصل","d":"sharing information with others"},{"w":"crops","ar":"محاصيل","d":"plants that farmers grow for food"},{"w":"pharmacist","ar":"صيدلي","d":"a person trained to give advice about medicines"}],"wr":{"type":"Information leaflet","prompt":"Write a short leaflet called 'Bee Facts' for younger children. Use at least two sub-headings from the text.","plan":["Pick two sub-headings","Write two facts under each","Add one safety tip about honey"],"chk":["Used sub-headings","Wrote in the present tense"],"len":"60 to 100","m":"Bee Facts. The queen: Every hive has one queen. She lays the eggs. The workers: Workers clean, guard the hive and collect nectar. Honey tip: Honey is food. Babies under one year must never eat it."},"q":[{"k":"mc","s":"RET","q":"How many queens does each hive have?","o":["Two","Hundreds","One","Twenty"],"a":2,"e":"The text says 'Each hive has one queen.'","ar":"كم ملكة في كل خلية؟"},{"k":"mc","s":"RET","q":"What is the main job of the drones?","o":["To collect nectar","To build wax comb","To guard the entrance","To mate with a queen from another hive"],"a":3,"e":"The drones' 'main job is to mate with a queen from another hive'.","ar":"ما المهمة الرئيسية لذكور النحل (drones)؟"},{"k":"mc","s":"VOC","q":"In the report, what does 'nectar' mean?","o":["A kind of wax","A type of seed","A sweet liquid in flowers","A baby bee"],"a":2,"e":"Workers collect nectar from flowers, and bees turn it into honey.","ar":"في التقرير، ماذا تعني كلمة \"nectar\" (الرحيق)؟"},{"k":"mc","s":"INF","q":"Why does the writer call a hive 'one of the busiest homes in nature'?","o":["Humans visit it every day","The bees never sleep","It is built in a busy city","Tens of thousands of bees live there and each has a job"],"a":3,"e":"The first paragraph says the hive holds many bees and 'every one of them has a job'.","ar":"لماذا تصف الكاتبة الخلية بأنها \"من أكثر البيوت نشاطًا في الطبيعة\"؟"},{"k":"mc","s":"INF","q":"What can you infer from 'how long she waggles tells them how far to go'?","o":["Only queens can dance","Bees can share information about distance","Bees can talk like people","All bees waggle for the same time"],"a":1,"e":"The length of the waggle gives a distance, so the bees share information.","ar":"ماذا تستنتج من عبارة \"مدة رقصة النحلة تخبر الأخريات كم المسافة\"؟"},{"k":"mc","s":"STR","q":"Why is the report split into sections with sub-headings?","o":["To tell a story in order","To make the text longer","To give the writer's opinion","So readers can find each topic quickly"],"a":3,"e":"Non-chronological reports group information by topic.","ar":"لماذا قُسّم التقرير إلى أقسام بعناوين فرعية؟"},{"k":"mc","s":"GRM","q":"Which word in 'Workers are all female' is a noun?","o":["are","Workers","female","all"],"a":1,"e":"'Workers' names a group of bees. 'Female' is an adjective.","ar":"أي كلمة في الجملة \"Workers are all female\" هي اسم؟"},{"k":"mc","s":"LIF","q":"Why must babies under one year old never be given honey?","o":["It makes them sleepy","It is too expensive","It is too sweet for their teeth","It can make them seriously ill"],"a":3,"e":"The text gives this safety rule. The NHS explains the risk is infant botulism.","ar":"لماذا يجب ألا يُعطى الرضّع دون عمر السنة العسل أبدًا؟"},{"k":"mc","s":"RET","q":"True or false? A queen can lay up to 2,000 eggs in one day at the peak of summer.","o":["True","False"],"a":0,"e":"This is stated in 'The queen' section.","ar":"صح أم خطأ؟ تضع الملكة حتى 2000 بيضة في اليوم في ذروة الصيف."},{"k":"mc","s":"INF","q":"True or false? All worker bees are male.","o":["True","False"],"a":1,"e":"The text says 'Workers are all female.'","ar":"صح أم خطأ؟ كل شغّالات النحل ذكور."},{"k":"mc","s":"LIF","q":"True or false? The text says honey is a medicine that always cures a sore throat.","o":["True","False"],"a":1,"e":"It says honey is 'a food, not a medicine' and suggests asking a pharmacist.","ar":"صح أم خطأ؟ يقول النص إن العسل دواء يشفي التهاب الحلق دائمًا."},{"k":"op","s":"INF","q":"Explain how bees help people who have never seen a hive.","m":"Bees carry pollen from flower to flower, which helps plants make seeds and fruit. Many of the crops that people eat grow because of this.","c":["Mentions pollen or flowers","Links it to food or crops"],"ar":"اشرح كيف يساعد النحل الناس حتى لو لم يروا خلية قط."},{"k":"op","s":"RES","q":"Which fact about bees surprised you most? Explain why.","m":"The waggle dance surprised me because a bee can tell the others where flowers are using only a dance.","c":["Chooses a fact","Gives a reason"],"ar":"ما الحقيقة عن النحل التي أدهشتك أكثر؟ اشرح."},{"k":"op","s":"MP","q":"Choose one sub-heading from the report. Give the main point of that section in one sentence of your own.","m":"Under 'The queen', the main point is that each hive has one queen and her job is to lay eggs, up to 2,000 in a day in summer.","c":["Chooses a sub-heading","Gives the main point in own words"],"ar":"اختر عنوانًا فرعيًا من التقرير. اذكر الفكرة الرئيسية لذلك القسم في جملة واحدة بكلماتك."},{"k":"op","s":"LIF","q":"Write two steps you would take if your friend had a cough and wanted to try honey.","m":"First, check the friend is over one year old and has no allergy. Second, ask a pharmacist or doctor if it is a good remedy and if the cough does not go away.","c":["Gives two sensible steps","Includes asking an adult or expert"],"ar":"اكتب خطوتين ستتخذهما إذا كان صديقك مصابًا بسعال ويريد تجربة العسل."}],"wcount":245},{"id":3,"t":"The Palm and the Reed","g":"Fable","c":"F","lk":1,"sk":[{"n":"Handle difficult conversations calmly"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":4,"t":"Ibn al-Haytham: The Scientist Who Explained Sight","g":"Biography","c":"N","lk":1,"sk":[{"n":"Recognise online scams and misinformation"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":5,"t":"The Journey of a Raindrop","g":"Explanation text","c":"N","lk":1,"sk":[{"n":"Store drinking water safely"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":6,"t":"The Missing Trophy","g":"Playscript","c":"F","play":true,"note":"An original playscript written for this pack. Each character's name has its own colour. Use the picture and sound spaces below to add your own scene picture or recordings.","x":"SCENE: The school hall on Monday morning. An empty glass cabinet stands at the back. Its handle has been fixed with new screws. MR HASSAN stares at it. LINA and OMAR hurry in.\n\nMR HASSAN: (sighing) The football trophy has vanished. It was here on Friday afternoon.\n\nLINA: (gasping) But there is no sign of a break-in!\n\nOMAR: (kneeling) Look, there are muddy footprints by the door. Small ones.\n\nMR HASSAN: Interesting. Did either of you see anyone near the hall on Friday?\n\nLINA: (hesitating) I saw Yusuf. He was carrying a big box.\n\nOMAR: (quickly) That doesn't mean he took it! My grandmother says the Quran tells us to avoid too much suspicion. We should not accuse anyone without proof.\n\nMR HASSAN: (nodding) Wise words, Omar.\n\n(YUSUF enters, holding a shining cup and a cloth.)\n\nYUSUF: (nervously) I can explain. The team captain asked me to polish the trophy for Monday's assembly. I took it home on Friday so nobody would see it before the surprise.\n\nMR HASSAN: (smiling) Then the mystery is solved. Next time, Yusuf, please tell me first!\n\nYUSUF: (holding up a screwdriver) I also fixed the loose cabinet handle. My uncle showed me how to tighten the screws, and I wore safety glasses.\n\nLINA: (laughing) And we thought we were detectives!","sk":[{"n":"Use basic hand tools","what":"Safely use a hammer, screwdriver, pliers, tape measure, wrench and level.","act":"Build a small labelled toolkit and practise simple tasks.","safe":"Wear eye protection where appropriate."},{"n":"Repair before replacing","what":"Learn basic repair, maintenance and troubleshooting for clothing, furniture and household goods.","act":"Choose one safe repair project each month.","safe":"Use qualified repairers for gas, mains electricity and safety-critical appliances."}],"tip":"Ask an adult to show you how to use a screwdriver safely. Wear safety glasses when you work, keep your fingers behind the tool, and fix a loose screw before it breaks something.","qr":[{"ref":"Quran 49:12","mean":"Avoid too much suspicion or assuming the worst of people. In the play, Omar's grandmother reminds him of this idea."}],"v":[{"w":"vanished","ar":"اختفى","d":"disappeared suddenly"},{"w":"gasping","ar":"يلهث من الدهشة","d":"breathing in sharply because of surprise"},{"w":"kneeling","ar":"جاثياً","d":"resting on your knees"},{"w":"hesitating","ar":"متردد","d":"pausing because you are not sure"},{"w":"nervously","ar":"بتوتر","d":"in a worried, shaky way"},{"w":"suspicion","ar":"شكّ / ريبة","d":"a feeling that someone has done something wrong"},{"w":"accuse","ar":"يتّهم","d":"to say someone has done something wrong"},{"w":"proof","ar":"دليل / إثبات","d":"facts that show something is true"},{"w":"polish","ar":"يلمّع","d":"to rub something until it shines"},{"w":"tighten","ar":"يشدّ","d":"to make a screw or knot firmer"}],"wr":{"type":"Playscript","prompt":"Write a short new scene for the play. Mr Hassan asks Yusuf to show Lina and Omar how to use a screwdriver safely.","plan":["Names of characters before their lines","Stage directions in brackets","Two safety rules"],"chk":["Put a colon after each name","Used brackets for stage directions"],"len":"60 to 100","m":"MR HASSAN: (smiling) Yusuf, show us how to use the screwdriver safely. YUSUF: (holding it carefully) First, wear safety glasses. LINA: (nodding) And keep my fingers behind the tool? YUSUF: Yes, and turn the screw slowly."},"q":[{"k":"mc","s":"RET","q":"Where does the scene take place?","o":["The playground","The school hall","Yusuf's house","The classroom"],"a":1,"e":"The scene begins 'The school hall on Monday morning'.","ar":"أين يدور المشهد؟"},{"k":"mc","s":"RET","q":"Why did Yusuf take the trophy home?","o":["To hide it from Mr Hassan","To keep it","To polish it for the assembly","To show his family"],"a":2,"e":"The team captain asked him to polish it for Monday's assembly.","ar":"لماذا أخذ يوسف الكأس إلى بيته؟"},{"k":"mc","s":"VOC","q":"What does 'hesitating' mean when Lina speaks?","o":["Running away","Pausing because she is unsure","Singing","Shouting loudly"],"a":1,"e":"She stops before accusing Yusuf.","ar":"ماذا تعني كلمة \"hesitating\" (متردد) حين تتكلم لينا؟"},{"k":"mc","s":"INF","q":"Why does Omar say 'That doesn't mean he took it!'?","o":["He wants to be fair and not accuse without proof","He is angry with Lina","He took the trophy himself","He is bored"],"a":0,"e":"He asks them not to accuse anyone without proof.","ar":"لماذا يقول عمر \"ذلك لا يعني أنه أخذها!\"؟"},{"k":"mc","s":"INF","q":"What does the stage direction '(nervously)' suggest about Yusuf?","o":["He is very tired","He is laughing","He is worried he will be blamed","He is proud of himself"],"a":2,"e":"Nervous speech shows worry.","ar":"ماذا توحي الإرشادات المسرحية \"(nervously)\" عن يوسف؟"},{"k":"mc","s":"STR","q":"How can you tell this text is a playscript?","o":["Names with colons, stage directions in brackets and a scene description","Paragraphs with no names","A list of ingredients","Rhyming verses"],"a":0,"e":"These are features of a playscript.","ar":"كيف تعرف أن هذا النص مسرحية؟"},{"k":"mc","s":"GRM","q":"What do the words in brackets, such as '(gasping)', tell the actor?","o":["Where the scene is","How to speak or act","When the play ends","What the character is thinking"],"a":1,"e":"They are stage directions.","ar":"ماذا تخبر الكلمات بين الأقواس مثل \"(gasping)\" الممثل؟"},{"k":"mc","s":"LIF","q":"Which safety item did Yusuf wear when he fixed the handle?","o":["Gloves and boots","A hat","Safety glasses","A helmet"],"a":2,"e":"He says 'I wore safety glasses.'","ar":"ما أداة السلامة التي ارتداها يوسف حين أصلح المقبض؟"},{"k":"mc","s":"RET","q":"True or false? Yusuf was carrying a big box on Friday.","o":["True","False"],"a":0,"e":"Lina says 'I saw Yusuf. He was carrying a big box.'","ar":"صح أم خطأ؟ كان يوسف يحمل صندوقًا كبيرًا يوم الجمعة."},{"k":"mc","s":"INF","q":"True or false? Mr Hassan was angry that Yusuf took the trophy.","o":["True","False"],"a":1,"e":"He smiles and says the mystery is solved.","ar":"صح أم خطأ؟ غضب السيد حسن لأن يوسف أخذ الكأس."},{"k":"mc","s":"LIF","q":"True or false? The play suggests repairing a loose handle can be better than replacing the whole cabinet.","o":["True","False"],"a":0,"e":"Yusuf tightened the screws, which is the repair-before-replacing idea for this skill.","ar":"صح أم خطأ؟ تقترح المسرحية أن إصلاح مقبض مرتخٍ قد يكون أفضل من استبدال الخزانة كلها."},{"k":"op","s":"INF","q":"Why do you think Yusuf did not tell Mr Hassan about the trophy?","m":"He wanted it to be a surprise for the assembly. He did not realise people would worry.","c":["Gives a reason","Uses the text"],"ar":"لماذا تظن أن يوسف لم يخبر السيد حسن عن الكأس؟"},{"k":"op","s":"RES","q":"Would you have accused Yusuf, as Lina did? Explain.","m":"I would have asked him first instead of accusing him, because there was no proof.","c":["Gives an opinion","Gives a reason"],"ar":"هل كنت ستتهم يوسف كما فعلت لينا؟ اشرح."},{"k":"op","s":"SCN","q":"Scan the play. What did Yusuf do to the cabinet, and who showed him how?","m":"He tightened the screws on the loose handle. His uncle showed him how.","c":["Says he fixed or tightened the handle","Says his uncle showed him"],"ar":"امسح المسرحية بنظرك بسرعة. ماذا فعل يوسف بالخزانة، ومن أراه كيف؟"},{"k":"op","s":"LIF","q":"List three safety rules for using a screwdriver.","m":"Wear safety glasses, keep fingers behind the tool, and use the right size of screwdriver for the screw.","c":["Three sensible rules","Linked to safety"],"ar":"اذكر ثلاث قواعد سلامة لاستخدام مفك البراغي."}],"wcount":216},{"id":7,"t":"Let's Walk to School!","g":"Persuasive text","c":"N","lk":1,"sk":[{"n":"Use sun protection effectively"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":8,"t":"How to Grow Cress on a Windowsill","g":"Instructions","c":"N","lk":1,"sk":[{"n":"Grow sprouts and microgreens safely"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":9,"t":"A Day at the Museum","g":"Diary recount","c":"F","lk":1,"sk":[{"n":"Navigate without a phone"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":10,"t":"A Letter to a Pen Pal","g":"Informal letter","c":"F","lk":1,"sk":[{"n":"Share skills and coordinate help"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":11,"t":"The Night Ferry","g":"Narrative poem","c":"F","lk":1,"sk":[{"n":"Build a household emergency plan"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":12,"t":"Camels: Ships of the Desert","g":"Non-chronological report","c":"N","lk":1,"sk":[{"n":"Prepare for extreme heat"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":13,"t":"How the Ibis Got Its Long Beak","g":"Myth in the traditional style","c":"F","lk":1,"sk":[{"n":"Build an emergency fund"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":14,"t":"Green Team Wins City Recycling Challenge","g":"Newspaper report","c":"N","lk":1,"sk":[{"n":"Set up a household waste-sorting system"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":15,"t":"Marie Curie: A Pioneer of Science","g":"Biography","c":"N","lk":1,"sk":[{"n":"Understand evidence levels for home remedies"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":16,"t":"How Does a Volcano Erupt?","g":"Explanation text","c":"N","lk":1,"sk":[{"n":"Prepare a 72-hour emergency kit"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":17,"t":"The New Girl","g":"Realistic story","c":"F","lk":1,"sk":[{"n":"Build a local support network"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":18,"t":"Cities Under the Sea","g":"Information text","c":"N","lk":1,"sk":[{"n":"Reduce single-use purchases"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":19,"t":"Should Children Have Screen Time Limits?","g":"Discussion text","c":"N","lk":1,"sk":[{"n":"Support sleep with practical habits"}],"x":"","q":[],"v":[],"wr":{},"qr":[]},{"id":20,"t":"The River That Made Egypt","g":"Information text","c":"N","lk":1,"sk":[{"n":"Understand renewable energy and its limits"}],"x":"","q":[],"v":[],"wr":{},"qr":[]}];
+const DEMO=true;
+const BUY='https://wa.me/201275775139?text=Hello%20Fluentry%20UK%2C%20I%27d%20like%20the%20full%20Stage%205%20Reading%20Comprehension%20pack.';
+const OBJ={"1": {"r": ["5Ra.02", "5Rg.01", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.15", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.03", "5Wc.06", "5Wp.05", "5Wv.01"]}, "2": {"r": ["5Ra.02", "5Rg.03", "5Ri.06", "5Ri.07", "5Ri.09", "5Ri.11", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wc.07", "5Wp.05", "5Ws.03", "5Wv.01"]}, "3": {"r": ["5Ra.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Rs.02", "5Rv.01", "5Rv.06", "5Rv.07"], "w": ["5Wc.01", "5Wc.02", "5Wc.06", "5Wg.03", "5Wp.05", "5Wv.01"]}, "4": {"r": ["5Ra.02", "5Rg.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.15", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wc.07", "5Wc.08", "5Wp.05", "5Wv.01"]}, "5": {"r": ["5Ra.02", "5Rg.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.15", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wc.07", "5Wp.05", "5Wv.01"]}, "6": {"r": ["5Ra.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.13", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.03", "5Wc.05", "5Wc.06", "5Wp.05", "5Wv.01"]}, "7": {"r": ["5Ra.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.17", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wc.07", "5Wc.08", "5Wp.05", "5Wv.01"]}, "8": {"r": ["5Ra.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.13", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wc.07", "5Wp.05", "5Ws.03", "5Wv.01"]}, "9": {"r": ["5Ra.02", "5Rg.01", "5Ri.06", "5Ri.09", "5Ri.11", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wp.05", "5Wv.01"]}, "10": {"r": ["5Ra.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.14", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wc.07", "5Wp.05", "5Wv.01"]}, "11": {"r": ["5Ra.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Rs.02", "5Rv.01", "5Rv.06", "5Rv.07"], "w": ["5Wc.01", "5Wc.02", "5Wc.06", "5Wp.05", "5Wv.01"]}, "12": {"r": ["5Ra.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.12", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wp.05", "5Ws.03", "5Wv.01"]}, "13": {"r": ["5Ra.02", "5Ri.06", "5Ri.09", "5Ri.10", "5Ri.11", "5Rs.02", "5Rv.01"], "w": ["5Wc.01", "5Wc.02", "5Wc.06", "5Wp.05", "5Wv.01"]}, "14": {"r": ["5Ra.02", "5Rg.01", "5Ri.06", "5Ri.09", "5Ri.11", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wg.03", "5Wp.05", "5Ws.03", "5Wv.01"]}, "15": {"r": ["5Ra.02", "5Rg.03", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.14", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wp.05", "5Wv.01"]}, "16": {"r": ["5Ra.02", "5Rg.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Rs.02", "5Rv.01", "5Rv.06", "5Rv.07"], "w": ["5Wc.02", "5Wc.06", "5Wp.05", "5Wv.01"]}, "17": {"r": ["5Ra.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Rs.02", "5Rv.01", "5Rv.05"], "w": ["5Wc.01", "5Wc.02", "5Wc.03", "5Wc.06", "5Wg.03", "5Wp.05", "5Wv.01"]}, "18": {"r": ["5Ra.02", "5Ri.06", "5Ri.07", "5Ri.09", "5Ri.11", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wp.05", "5Ws.03", "5Wv.01"]}, "19": {"r": ["5Ra.02", "5Rg.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.17", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wc.08", "5Wp.05", "5Wv.01"]}, "20": {"r": ["5Ra.02", "5Rg.02", "5Ri.06", "5Ri.09", "5Ri.11", "5Ri.15", "5Rs.02", "5Rv.01"], "w": ["5Wc.02", "5Wc.06", "5Wp.05", "5Ws.03", "5Wv.01"]}};
+const OBJW={"5Rv.01": "Deduce the meanings of unfamiliar words, including using context and knowledge of root words, prefixes and suffixes.", "5Rv.05": "Comment on a writer's choice of language, including how it conveys feeling and mood.", "5Rv.06": "Identify figurative language in texts, including metaphors and personification.", "5Rv.07": "Begin to explain how figurative language creates imagery in texts and takes understanding beyond the literal.", "5Rg.01": "Explore in texts, and understand, grammar and punctuation differences between direct and reported speech.", "5Rg.02": "Recognise different clauses within sentences and the connectives that link them.", "5Rg.03": "Explore and discuss different types of nouns, including abstract nouns, and how quantifiers (e.g. fewer, less) relate to countable and uncountable nouns.", "5Rs.02": "Explore and recognise the key features of text structure in a range of different fiction and non-fiction texts, including poems and playscripts.", "5Ri.06": "Explore explicit meanings in a range of texts.", "5Ri.07": "Extract main points from a text, and group and link ideas.", "5Ri.09": "Explore implicit meanings in a range of texts.", "5Ri.10": "Use a range of types of clues in stories (e.g. personality of characters) to predict what might happen next.", "5Ri.11": "Make inferences from texts, including about the relationships between story characters.", "5Ri.12": "Distinguish between fact and opinion in a range of texts.", "5Ri.13": "Use scanning and skimming appropriately depending on the type of information required.", "5Ri.14": "Locate and use relevant information from a single text or different texts.", "5Ri.15": "Support answers to questions with reference to, or quotations from, one or more points in a text.", "5Ri.17": "Comment on how a viewpoint is expressed in fiction and non-fiction texts.", "5Ra.02": "Express personal responses to texts, including predictions, opinions and reflections.", "5Wv.01": "Use specialised vocabulary accurately to match a familiar topic.", "5Wg.03": "Punctuate direct speech accurately.", "5Ws.03": "Use organisational features appropriate to the text type, e.g. bulleted and numbered lists.", "5Wc.01": "Develop creative writing in a range of different genres of fiction and types of poems.", "5Wc.02": "Use effective planning to inform the content and structure of writing, e.g. paragraphs or sections.", "5Wc.03": "Write new scenes or characters into a story; rewrite events from the viewpoint of another character.", "5Wc.05": "Write a playscript, including production notes and stage directions to guide performance.", "5Wc.06": "Develop writing for a purpose using language and features appropriate for a range of text types.", "5Wc.07": "Develop writing of a range of text types for a specified audience, using appropriate content and language.", "5Wc.08": "When writing non-fiction texts, present and justify a consistent viewpoint.", "5Wp.05": "Proofread for grammar, spelling and punctuation errors, and make corrections, including using on-screen tools."};
+const SKT={RET:['Retrieval','0058 English 5Ri.06'],VOC:['Vocabulary','0058 English 5Rv.01'],INF:['Inference','0058 English 5Ri.09, 5Ri.11'],STR:['Text structure and features','0058 English 5Rs.02'],GRM:['Grammar and punctuation','0058 English 5Rg strand'],RES:['Personal response','0058 English 5Ra.02'],LIF:['Link to life skills','Life skills'],VAL:['Faith and values link','Quran'],LNG:["Writer's choice of language",'0058 English 5Rv.05'],FIG:['Figurative language','0058 English 5Rv.06, 5Rv.07'],MP:['Main points','0058 English 5Ri.07'],QUO:['Evidence from the text','0058 English 5Ri.15'],PRG:['Progression of ideas','0058 English 5Rs.01'],DRM:['Playscript conventions','0058 English 5Ri.08'],VPT:['Viewpoint','0058 English 5Ri.17'],DSP:['Direct and reported speech','0058 English 5Rg.01'],FO:['Fact and opinion','0058 English 5Ri.12'],PRD:['Prediction','0058 English 5Ri.10'],LOC:['Locate information','0058 English 5Ri.14'],SCN:['Scanning','0058 English 5Ri.13']};
+const TABS=[['read','Read and answer (15)'],['write','Writing'],['ws','Word search'],['cw','Crossword'],['life','Life skills and values']];
+
+/* ---------- state ---------- */
+const KEY='stage5-rc-v2';
+let S={a:{},o:{},w:{},wc:{},ws:{},cw:{},fs:1,teacher:false};
+const QA={};let filt='all',tab='read',curId=null,wsSel=null,cwDir=1;
+function load(){try{const r=localStorage.getItem(KEY);if(r){S=Object.assign(S,JSON.parse(r));}}catch(e){}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const app=()=>document.getElementById('app');
+function st(pid,qi){S.a[pid]=S.a[pid]||{};S.a[pid][qi]=S.a[pid][qi]||{};return S.a[pid][qi];}
+const getP=id=>P.find(p=>p.id===id);
+const wcount=s=>(s.replace(/^#+ /gm,'').match(/\S+/g)||[]).length;
+
+/* ---------- passage text with highlighted key words ---------- */
+function kwRe(p){
+ if(!p._re){
+  const forms=p.v.map(v=>v.w).sort((a,b)=>b.length-a.length).map(f=>f.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'));
+  p._re=new RegExp('\\b('+forms.join('|')+')\\b','gi');
+ }
+ return p._re;
+}
+function hl(p,s){
+ const re=kwRe(p);re.lastIndex=0;
+ return s.replace(re,m=>{
+  const i=p.v.findIndex(v=>v.w.toLowerCase()===m.toLowerCase());
+  const v=p.v[i];
+  return '<span class="kwr"><button class="kw" data-act="kw" aria-expanded="false" aria-label="Key word '+esc(m)+'. Press for the Arabic meaning">'+m+'<sup>?</sup></button><span class="pop" hidden>'+popSlot(v.w)+'<span class="ar" lang="ar" dir="rtl">'+esc(v.ar)+'</span><span class="en"><b>'+esc(v.w)+'</b>: '+esc(v.d)+'</span></span></span>';
+ });
+}
+const CASTRE=/^([A-Z][A-Z ]+): (\([^)]*\) )?(.*)$/;
+function castOf(p){const c=[];p.x.split('\n').forEach(l=>{const m=CASTRE.exec(l);if(m&&m[1]!=='SCENE'&&!c.includes(m[1]))c.push(m[1]);});return c;}
+function playFmt(p){
+ const E=s=>hl(p,esc(s)),cast=castOf(p);
+ let h='<div class="cast" aria-label="Cast">'+cast.map((n,i)=>'<span class="sp sc'+(i%6)+'">'+esc(n)+'</span>').join('')+'</div>';
+ p.x.split('\n\n').forEach(b=>{
+  b.split('\n').forEach(l=>{
+   const m=/^SCENE:/.test(l)?null:CASTRE.exec(l);
+   if(m){const i=cast.indexOf(m[1])%6;h+='<p class="line l'+i+'"><span class="sp sc'+i+'">'+esc(m[1])+'</span> '+(m[2]?'<span class="sd">'+E(m[2].trim())+'</span> ':'')+E(m[3])+'</p>';}
+   else if(/^SCENE:/.test(l))h+='<p class="scene">'+E(l)+'</p>';
+   else h+='<p class="sd">'+E(l)+'</p>';
+  });
+ });
+ return h;
+}
+const PN=p=>'p'+String(p.id).padStart(2,'0');
+const wpath=w=>'img/words/'+w.toLowerCase()+'.png';
+const DIAG=[2,5,8,12,16,18];
+const NOPIC=new Set(["accept", "challenge", "check", "claimed", "communication", "consistent", "councils", "elements", "energy", "evidence", "habits", "hardship", "humble", "imagine", "inspired", "isolation", "limits", "local", "middle", "moderate", "mysterious", "patience", "private", "proof", "recommend", "reminded", "source", "suspicion", "threats", "translated", "trust", "trusted", "vulnerable"]);
+function popSlot(w){if(NOPIC.has(w.toLowerCase()))return '';return '<span class="slot pp" data-file="'+wpath(w)+'" data-kind="img"><span class="slotbox"></span></span>';}
+const P2=n=>String(n).padStart(2,'0');
+function slot(path,kind,label){return '<div class="slot" data-file="'+path+'" data-kind="'+kind+'"><b>'+esc(label)+'</b><div class="slotbox"></div></div>';}
+function topMedia(p){return '<div class="media no-print"><div class="mrow">'+slot('img/passages/'+PN(p)+'.png','img','Picture')+slot('audio/'+PN(p)+'-passage.mp3','aud','Listen to the passage')+'</div></div>';}
+function mediaHTML(p){
+ const cast=castOf(p);
+ return '<div class="media no-print"><h4>Character pictures and voices</h4><div class="mrow">'+cast.map((n,i)=>'<div><span class="sp sc'+(i%6)+'">'+esc(n)+'</span>'+slot('img/characters/'+PN(p)+'-c'+(i+1)+'.png','img','Picture')+slot('audio/'+PN(p)+'-c'+(i+1)+'.mp3','aud','Voice')+'</div>').join('')+'</div></div>';
+}
+function fmt(p){
+ if(p.play)return playFmt(p)+mediaHTML(p);
+ const E=s=>hl(p,esc(s));
+ return p.x.split('\n\n').map(b=>{
+  if(b.startsWith('# '))return '<h3 class="headline">'+E(b.slice(2))+'</h3>';
+  if(b.startsWith('## '))return '<h4>'+E(b.slice(3))+'</h4>';
+  const ls=b.split('\n');
+  if(ls.every(l=>/^- /.test(l)))return '<ul>'+ls.map(l=>'<li>'+E(l.slice(2))+'</li>').join('')+'</ul>';
+  if(ls.every(l=>/^\d+\. /.test(l)))return '<ol>'+ls.map(l=>'<li>'+E(l.replace(/^\d+\. /,''))+'</li>').join('')+'</ol>';
+  return '<p>'+ls.map(E).join('<br>')+'</p>';
+ }).join('')+(DIAG.includes(p.id)?'<div class="media no-print">'+slot('img/diagrams/'+PN(p)+'.png','img','Diagram or picture sequence')+'</div>':'');
+}
+function vocabHTML(p){
+ let h='<div class="vocab"><h3>Key words</h3><p class="small">Highlighted words in the text have a <b>?</b>. Press it, or a word below, to see the Arabic meaning.</p><div class="row no-print" style="margin:0 0 8px"><button class="btn ghost" data-act="vall">Show all Arabic</button><button class="btn ghost" data-act="vnone">Hide all</button></div><div class="vgrid">';
+ p.v.forEach((v,i)=>{
+  h+='<div class="vk"><button class="vq" data-act="vk" aria-expanded="false"><b>'+esc(v.w)+'</b><span>?</span></button><div class="vbody" hidden><span class="ar" lang="ar" dir="rtl">'+esc(v.ar)+'</span><span class="en">'+esc(v.d)+'</span><span class="no-print">'+(NOPIC.has(v.w.toLowerCase())?'':slot(wpath(v.w),'img','Picture'))+slot('audio/'+PN(p)+'-w'+P2(i+1)+'.mp3','aud','Say the word')+'</span></div></div>';
+ });
+ return h+'</div></div>';
+}
+
+
+/* ---------- marks (like a mark scheme: marks out of N, red/amber/green, issue codes) ---------- */
+const STOP=new Set('about after again also because been before being between both could does each from have into just like make many more most much only other over same should some such than that their them then there these they this those very what when where which while with would your are was were and the for not but can has had how why who its you our out all any'.split(' '));
+function stems(s){return (s.toLowerCase().match(/[a-z]{4,}/g)||[]).filter(w=>!STOP.has(w)).map(w=>w.slice(0,5));}
+function markOpen(q,text){
+ const ans=text.trim(),words=(ans.match(/\S+/g)||[]).length,key=[...new Set(stems(q.m))],as=new Set(stems(ans));
+ const hit=key.filter(k=>as.has(k)).length,ov=key.length?hit/key.length:0;
+ const codes=[];let s=0;
+ if(words>=4&&ov>=0.2)s=1;
+ if(words>=9&&ov>=0.4)s=2;
+ if(words<9)codes.push(1);
+ if(ov<0.4)codes.push(2);
+ if(s<2&&!/\b(because|so|as|since|for example|for instance|which|this shows|therefore|but)\b/i.test(ans))codes.push(3);
+ if(!/^[A-Z0-9'"‘“]/.test(ans)||!/[.!?'"’”)]$/.test(ans))codes.push(4);
+ if(!ans)return{s:0,max:2,codes:[1],hit:0,key:key.length};
+ return{s:s,max:2,codes:codes,hit:hit,key:key.length};
+}
+const CODES={1:'Answer is too short. Write a full sentence or two.',2:'Few ideas from the text or topic. Look back and add key details.',3:'Add a reason or example (because, for example, this shows).',4:'Check your capital letter at the start and full stop at the end.'};
+function rag(s,max){const r=max?s/max:0;return r>=0.75?['green','Green']:r>=0.4?['amber','Amber']:['red','Red'];}
+function qMax(q){return q.k==='op'?2:1;}
+function totals(p){let s=0,max=0,got=0,tot=0,am=0;
+ p.q.forEach((q,i)=>{const st=((S.a[p.id]||{})[i])||{};max+=qMax(q);
+  if(q.k==='mc'){if(st.done){got++;am++;if(st.ok)s++;}}
+  else if(st.mk){got++;am+=2;s+=st.mk.s;}});
+ return{s,max,got,am,tot:p.q.length};}
+function pstatText(p){const T=totals(p),r=rag(T.s,T.am);
+ return T.got?(T.got===T.tot?'<b>Well done! 🌟 You finished this passage.</b> ':'')+'Marks so far: <b>'+T.s+' out of '+T.am+'</b> <span class="rag '+r[0]+'">'+r[1]+'</span> | marked '+T.got+' of '+T.tot+' questions (full set: '+T.max+' marks)':'Full set: '+T.max+' marks (1 for each choice question, 2 for each written answer)';}
+function markBox(q,st,pid,qi){
+ if(!st.mk)return '';
+ const m=st.mk,r=rag(m.s,m.max),ans=(S.o[pid+'-'+qi]||'').trim();
+ const as=new Set(stems(ans));
+ const miss=[...new Set((q.m.toLowerCase().match(/[a-z]{4,}/g)||[]).filter(w=>!STOP.has(w)&&!as.has(w.slice(0,5))))].slice(0,5);
+ const ratio=m.key?m.hit/m.key:0,is=ratio>=0.4?2:ratio>=0.2?1:0;
+ const short=m.codes.indexOf(1)>=0,noreason=m.codes.indexOf(3)>=0,punct=m.codes.indexOf(4)>=0;
+ const rows=[
+  ['Ideas from the text',is,2,is===2?'Great: you used key ideas from the text.':'Next time: look back at the text and add more details that answer the question.'+(miss.length?' Try words like: <b>'+miss.map(esc).join(', ')+'</b>.':'')],
+  ['Reason or example',noreason?0:1,1,noreason?'Next time: explain your answer. Use <b>because</b>, <b>for example</b> or <b>this shows</b>.':'Great: you gave a reason or example.'],
+  ['Full sentence',short?0:1,1,short?'Next time: write a full sentence or two (about 9 words or more).':'Great: your answer is long enough.'],
+  ['Capital letter and full stop',punct?0:1,1,punct?'Next time: start with a capital letter and end with a full stop.':'Great: your punctuation is correct.']];
+ return '<div class="fb '+(r[0]==='green'?'good':r[0]==='red'?'bad':'warn')+'" role="status"><div class="fbh"><b>Your mark: '+m.s+' out of '+m.max+'</b> <span class="rag '+r[0]+'">'+r[1]+'</span> <span class="small">Marked automatically.</span></div>'
+  +rows.map(x=>{const ok=x[1]===x[2];return '<div class="fbrow"><div><b>'+x[0]+'</b><br><span class="small">'+x[3]+'</span></div><span class="fbsc '+(ok?'ok':x[1]?'mid':'no')+'">'+x[1]+'/'+x[2]+'</span></div>';}).join('')
+  +'<span class="small">If you are unsure of any part, please check with your teacher.</span></div>';
+}
+
+/* ---------- questions ---------- */
+function stat(p){
+ let done=0,ok=0,auto=0;
+ p.q.forEach((q,i)=>{
+  const s=(S.a[p.id]||{})[i]||{};
+  if(q.k==='op'){if(s.mk||s.show||((S.o[p.id+'-'+i]||'').trim().length>=10))done++;}
+  else{auto++;if(s.done){done++;if(s.ok)ok++;}}
+ });
+ return{done,ok,auto,tot:p.q.length};
+}
+function ansHTML(q){
+ if(q.k==='mc')return '<b>Answer: '+(q.o.length>2?String.fromCharCode(65+q.a)+'. ':'')+esc(q.o[q.a])+'</b><br>'+esc(q.e);
+ return '<b>Model answer:</b> '+esc(q.m)+'<br><b>Success criteria:</b><ul>'+q.c.map(c=>'<li>'+esc(c)+'</li>').join('')+'</ul>';
+}
+function qHTML(p,qi){
+ const q=p.q[qi],s=st(p.id,qi),n=qi+1,sk=SKT[q.s];
+ let h='<div class="q" id="q-'+p.id+'-'+qi+'"><div class="qh"><span class="qn">'+n+'</span><span class="tag">'+sk[0]+' ('+sk[1]+')</span><button class="qar" data-act="qar" data-k="'+p.id+'-'+qi+'" aria-expanded="'+(!!QA[p.id+'-'+qi])+'" aria-label="Arabic translation of question '+n+'">?</button></div>'+(QA[p.id+'-'+qi]?'<div class="qab" lang="ar" dir="rtl">'+esc(q.ar)+'</div>':'')+'<p class="qt">'+esc(q.q)+'</p>';
+ if(q.k==='mc'){
+  const two=q.o.length===2;
+  h+='<div class="opts'+(two?' two':'')+'" role="radiogroup" aria-label="Question '+n+' options">';
+  q.o.forEach((o,i)=>{
+   let cls='opt';
+   if(s.done){if(i===q.a)cls+=' good';else if(i===s.sel)cls+=' bad';}
+   h+='<label class="'+cls+'"><input type="radio" name="r-'+p.id+'-'+qi+'" value="'+i+'" data-pid="'+p.id+'" data-qi="'+qi+'"'+(s.sel===i?' checked':'')+(s.done?' disabled':'')+'><span>'+esc((two?'':String.fromCharCode(65+i)+'. ')+o)+'</span></label>';
+  });
+  h+='</div><div class="row no-print">';
+  if(!s.done)h+='<button class="btn" data-act="check" data-pid="'+p.id+'" data-qi="'+qi+'">Check answer</button>';
+  else if(!s.ok)h+='<button class="btn ghost" data-act="retry" data-pid="'+p.id+'" data-qi="'+qi+'">Try again</button>';
+  h+='</div>';
+  if(s.warn&&!s.done)h+='<div class="fb warn" role="status">Choose an answer first.</div>';
+  if(s.done)h+='<div class="fb '+(s.ok?'good':'bad')+'" role="status">'+(s.ok?'Correct. ':'Not quite. The answer is '+(two?'':String.fromCharCode(65+q.a)+'. ')+esc(q.o[q.a])+'. ')+esc(q.e)+'</div>';
+ }else{
+  const k=p.id+'-'+qi;
+  h+='<textarea data-o="'+k+'" aria-label="Your answer to question '+n+'" placeholder="Write your answer here...">'+esc(S.o[k]||'')+'</textarea>';
+  h+='<div class="row no-print"><button class="btn" data-act="mark" data-pid="'+p.id+'" data-qi="'+qi+'">Mark my answer (out of 2)</button><button class="btn ghost" data-act="model" data-pid="'+p.id+'" data-qi="'+qi+'">'+(s.show?'Hide model answer':'Show model answer')+'</button></div>'+markBox(q,s,p.id,qi);
+  if(s.show)h+='<div class="model"><b>Model answer</b><p>'+esc(q.m)+'</p><b>Check your answer. Did you...</b><ul>'+q.c.map(c=>'<li>'+esc(c)+'?</li>').join('')+'</ul></div>';
+ }
+ return h+'<div class="ans">'+ansHTML(q)+'</div></div>';
+}
+
+
+/* ---------- automatic writing marker (rubric) ---------- */
+const LEVELS=['Not yet','Emerging','Secure','Strong'];
+const FEAT={
+ diary:[['Written in the first person (I, my)',/\b(I|my|me|we|our)\b/],['Uses time words (then, after, next, today...)',/\b(then|after|next|first|later|today|finally|when|before|yesterday|last night)\b/i]],
+ leaflet:[['Has a heading or sub-heading line',/^[A-Z][^.!?\n]{2,40}:?\s*$/m],['Uses present tense facts (is, are, has, can)',/\b(is|are|has|have|can|lays|lay|live)\b/i]],
+ fable:[['Uses speech marks for what characters say',/['"‘“][^'"\n]{3,}['"’”]/],['Has a moral or lesson',/\b(moral|lesson)\b/i],['Uses the past tense (at least three -ed or was/were words)',null,'past']],
+ myth:[['Uses speech marks for what characters say',/['"‘“][^'"\n]{3,}['"’”]/],['Has a lesson or ending line',/\b(moral|lesson|from that day|ever since|learn)\b/i],['Uses the past tense (at least three -ed or was/were words)',null,'past']],
+ story:[['Uses speech marks',/['"‘“][^'"\n]{3,}['"’”]/],['Shows a feeling (felt, smiled, afraid, happy...)',/\b(felt|feel|smiled|afraid|happy|nervous|proud|scared|warm|glad|sad|shy)\b/i],['Uses the past tense (at least three -ed or was/were words)',null,'past']],
+ persuasive:[['Uses ordering words (first, second, finally)',/\b(first|second|third|finally|also|next)\b/i],['Has a greeting or polite closing (Dear, Yours)',/\b(dear|yours|sincerely|please|thank)\b/i]],
+ explanation:[['Uses order words (first, then, next, finally)',/\b(first|then|next|finally)\b/i],['Uses the present tense',/\b(is|are|turns|becomes|rises|cools|falls|forms|melts|bursts|builds|warms)\b/i]],
+ play:[['Character names followed by a colon',/^[A-Za-z][A-Za-z ]{1,20}:/m,'twolines'],['Stage directions in brackets',/\([^)]{2,}\)/]],
+ instructions:[['Numbered steps (at least three)',/^\s*\d+[.)]/m,'steps'],['Starts steps with command verbs',/^\s*\d+[.)]\s*[A-Z][a-z]+/m]],
+ letter:[['Starts with Dear...',/^\s*dear\b/i],['Ends with a sign-off (Your friend, Yours)',/\b(your friend|yours|best wishes|love)\b/i]],
+ poem:[['Has at least four lines',null,'lines4'],['Uses describing words (colour, light, soft...)',/\b(like|as|soft|bright|dark|golden|warm|cold|silver|tall|tiny)\b/i]],
+ report:[['Has a heading or sub-heading line',/^[A-Z][^.!?\n]{2,40}:?\s*$/m],['Uses the present tense',/\b(is|are|has|have|can|should)\b/i]],
+ news:[['Has a headline',/^[A-Z][^.!?\n]{2,60}!?\s*$/m],['Includes a quotation in speech marks',/['"‘“][^'"\n]{3,}['"’”]/],['Uses the past tense (at least three -ed or was/were words)',null,'past']],
+ bio:[['Uses the past tense (at least three -ed or was/were words)',null,'past'],['Includes a date or year (digits)',/\b\d{3,4}\b/]],
+ discuss:[['Gives both sides (some / others / however)',/\b(however|on the other hand|others|some people|but)\b/i],['Gives a conclusion (in my view, overall)',/\b(in my view|i think|overall|in conclusion|my opinion)\b/i]]
+};
+function featKey(type){
+ const s=type.toLowerCase();
+ if(s.includes('diary'))return 'diary';if(s.includes('leaflet'))return 'leaflet';if(s.includes('fable'))return 'fable';if(s.includes('myth'))return 'myth';
+ if(s.includes('story'))return 'story';if(s.includes('persuasive'))return 'persuasive';if(s.includes('explanation'))return 'explanation';if(s.includes('playscript'))return 'play';
+ if(s.includes('instruction'))return 'instructions';if(s.includes('letter'))return 'letter';if(s.includes('poem'))return 'poem';if(s.includes('newspaper'))return 'news';
+ if(s.includes('biography'))return 'bio';if(s.includes('discussion'))return 'discuss';return 'report';
+}
+function markWriting(p,text){
+ const W=p.wr,txt=text||'',words=(txt.match(/\S+/g)||[]).length;
+ const nums=(W.len.match(/\d+/g)||[]).map(Number);
+ const lines=txt.split('\n').filter(l=>l.trim()).length;
+ const out=[];
+ // 1 length
+ let sc=0,note;
+ if(/line/.test(W.len)){const n=nums[0]||4;sc=lines>=n?3:lines>=n-1?2:lines>=2?1:0;note=lines+' lines written (aim for '+n+')';}
+ else{const lo=nums[0]||50,hi=nums[1]||lo*1.5;sc=words>=lo&&words<=hi*1.6?3:words>=lo*0.75?2:words>=lo*0.4?1:0;note=words+' words (aim for '+W.len+')';}
+ out.push({n:'Length and effort',s:sc,note});
+ // 2 key words
+ const used=p.v.filter(v=>new RegExp('\\b'+v.w.slice(0,Math.max(4,v.w.length-2))+'\\w*','i').test(txt)).map(v=>v.w);
+ sc=used.length>=3?3:used.length===2?2:used.length===1?1:0;
+ out.push({n:'Key vocabulary',s:sc,note:used.length?('Used: '+used.join(', ')+' (aim for at least 3)'):'No key words from the list found (aim for at least 3)'});
+ // 3 sentences
+ const poemLike=/line/.test(W.len)||featKey(W.type)==='play'||featKey(W.type)==='instructions';
+ const parts=poemLike?txt.split('\n').filter(l=>l.trim()):txt.split(/(?<=[.!?])\s+|\n+/).filter(s=>s.trim());
+ const capOk=parts.filter(s=>/^[\s'"‘“(\d]*[A-Z0-9]/.test(s)).length;
+ const endOk=poemLike?parts.length:parts.filter(s=>/[.!?'"’”)]\s*$/.test(s.trim())).length;
+ const rate=parts.length?(capOk+endOk)/(2*parts.length):0;
+ sc=rate>=0.9?3:rate>=0.7?2:rate>=0.4?1:0;
+ out.push({n:'Capital letters and punctuation',s:sc,note:parts.length?Math.round(rate*100)+'% of sentences start with a capital letter and end with punctuation':'Nothing to check yet'});
+ // 4 features
+ const feats=FEAT[featKey(W.type)];let hit=0;const miss=[];
+ feats.forEach(f=>{let ok=false;
+  if(f[2]==='past'){ok=((txt.match(/\b\w+ed\b|\b(was|were|had|went|said|saw|took|made|found|came|felt|ran|knew)\b/gi)||[]).length)>=3;}
+  else if(f[2]==='lines4'){ok=lines>=4;}
+  else if(f[2]==='steps'){ok=((txt.match(/^\s*\d+[.)]/gm)||[]).length)>=3;}
+  else if(f[2]==='twolines'){ok=((txt.match(/^[A-Za-z][A-Za-z ]{1,20}:/gm)||[]).length)>=2;}
+  else ok=f[1].test(txt);
+  if(ok)hit++;else miss.push(f[0]);});
+ const fr=hit/feats.length;sc=fr>=1?3:fr>=0.6?2:hit>0?1:0;
+ out.push({n:'Features of the text type ('+W.type+')',s:sc,note:miss.length?'Not found: '+miss.join('; '):'All features found'});
+ return out;
+}
+function markHTML(p,k){
+ const text=S.w[k]||'';
+ if(!text.trim())return '<div class="fb warn" role="status">Write something first, then press the button.</div>';
+ const r=markWriting(p,text),tot=r.reduce((a,x)=>a+x.s,0),max=r.length*3;
+ const lv=tot>=max*0.85?3:tot>=max*0.6?2:tot>=max*0.3?1:0;
+ return '<div class="model" role="status"><b>Automatic check: '+tot+' out of '+max+' ('+LEVELS[lv]+')</b><table class="rub"><thead><tr><th>Criterion</th><th>Score</th><th>What the check found</th></tr></thead><tbody>'
+  +r.map(x=>'<tr><td>'+esc(x.n)+'</td><td>'+x.s+' / 3 ('+LEVELS[x.s]+')</td><td>'+esc(x.note)+'</td></tr>').join('')+'</tbody></table>'
+  +'<p class="small">This is a computer check of surface features only. It cannot judge ideas, spelling, sense or handwriting. If you are unsure of any part, please check with your teacher, who marks the final grade using the rubric below.</p></div>';
+}
+const RUBRIC=[
+ ['Ideas and content','Little relevant content','Some relevant ideas, few details','Clear ideas with some detail','Well developed ideas with specific detail'],
+ ['Organisation','No clear order','Some order; few links','Clear beginning, middle and end','Well organised with linking words'],
+ ['Vocabulary','Simple words only','A few key words used','Several key words used correctly','Key words and precise words used well'],
+ ['Spelling, grammar and punctuation','Many errors that block meaning','Frequent errors','Mostly accurate','Accurate with varied sentences'],
+ ['Text-type features','Features missing','One or two features','Most features present','All features used effectively']];
+function rubricHTML(){
+ return '<h3 style="margin-top:14px">Teacher rubric (0 to 3 each, total 15)</h3><div style="overflow:auto"><table class="rub"><thead><tr><th>Criterion</th><th>0 Not yet</th><th>1 Emerging</th><th>2 Secure</th><th>3 Strong</th></tr></thead><tbody>'+RUBRIC.map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div><p class="small">Suggested bands: 13 to 15 Strong, 9 to 12 Secure, 5 to 8 Emerging, 0 to 4 Not yet. These are classroom bands made for this pack, not Cambridge grades.</p>';
+}
+
+/* ---------- writing ---------- */
+const GENCHK=['Used capital letters and full stops correctly','Used at least three key words from the list','Read it through and checked my spelling'];
+function writeHTML(p){
+ const W=p.wr,k=String(p.id);
+ const chk=W.chk.concat(GENCHK);
+ let h='<div class="box"><h3>Writing task: '+esc(W.type)+'</h3><p><b>'+esc(W.prompt)+'</b></p><p class="small">Aim for '+esc(W.len)+' words. Use your plan first.</p><h3 style="margin-top:12px">Plan</h3><ul>'+W.plan.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+ h+='<div class="media no-print"><div class="mrow">'+slot('img/writing/'+PN(p)+'.png','img','Picture prompt')+slot('audio/'+PN(p)+'-writing.mp3','aud','Listen to the task')+'</div></div>';
+ h+='<textarea style="min-height:200px" data-w="'+k+'" aria-label="Your writing" placeholder="Write here...">'+esc(S.w[k]||'')+'</textarea>';
+ h+='<p class="small">Words so far: <b id="wcnt-'+k+'">'+wcount(S.w[k]||'')+'</b></p>';
+ h+='<h3>Check your writing</h3><div class="checks">'+chk.map((c,i)=>'<label><input type="checkbox" data-wc="'+k+'-'+i+'"'+(S.wc[k+'-'+i]?' checked':'')+'><span>'+esc(c)+'</span></label>').join('')+'</div>';
+ h+='<div class="row no-print"><button class="btn" data-act="wmark" data-pid="'+p.id+'">Mark my writing</button><button class="btn ghost" data-act="clearwrite" data-pid="'+p.id+'">Try again (clear my writing)</button></div><div id="wmark-'+k+'">'+(S['wk'+k]?markHTML(p,k):'')+'</div>';
+ h+='<div class="row no-print"><button class="btn ghost" data-act="wmodel" data-pid="'+p.id+'">'+(S['wm'+k]?'Hide sample':'Show a sample')+'</button></div>';
+ if(S['wm'+k])h+='<div class="model"><b>Sample answer (yours will be different)</b><p>'+esc(W.m)+'</p></div>';
+ h+='<div class="ans"><b>Teacher note:</b> '+esc(W.m)+'</div>'+rubricHTML();
+ return h+'</div>';
+}
+
+/* ---------- puzzles ---------- */
+function rng(seed){let s=seed%2147483647;if(s<=0)s+=2147483646;return()=>{s=s*48271%2147483647;return (s-1)/2147483646;};}
+function genWS(p){
+ if(p._ws)return p._ws;
+ const words=p.v.map(v=>v.w.toUpperCase());const N=Math.max(13,Math.max(...words.map(w=>w.length))+1);
+ const dirs=[[0,1],[1,0],[1,1],[-1,1]];
+ for(let at=0;at<300;at++){
+  const R=rng(p.id*7919+at*13+1);
+  const g=Array.from({length:N},()=>Array(N).fill(''));
+  const pl=[];let ok=true;
+  const order=words.slice().sort((a,b)=>b.length-a.length);
+  for(const w of order){
+   let placed=false;
+   for(let k=0;k<400&&!placed;k++){
+    const d=dirs[Math.floor(R()*dirs.length)],r=Math.floor(R()*N),c=Math.floor(R()*N);
+    const er=r+d[0]*(w.length-1),ec=c+d[1]*(w.length-1);
+    if(er<0||er>=N||ec<0||ec>=N)continue;
+    let fit=true;
+    for(let i=0;i<w.length;i++){const ch=g[r+d[0]*i][c+d[1]*i];if(ch&&ch!==w[i]){fit=false;break;}}
+    if(!fit)continue;
+    for(let i=0;i<w.length;i++)g[r+d[0]*i][c+d[1]*i]=w[i];
+    pl.push({w,r,c,d});placed=true;
+   }
+   if(!placed){ok=false;break;}
+  }
+  if(ok){
+   const A='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   for(let r=0;r<N;r++)for(let c=0;c<N;c++)if(!g[r][c])g[r][c]=A[Math.floor(R()*26)];
+   p._ws={g,pl,N,words};return p._ws;
+  }
+ }
+ return null;
+}
+function wsHTML(p){
+ const W=genWS(p);if(!W)return '<div class="box">Word search unavailable.</div>';
+ const found=S.ws[p.id]||[];
+ const fc=new Set(),sc=new Set();
+ W.pl.forEach(x=>{for(let i=0;i<x.w.length;i++){const k=(x.r+x.d[0]*i)+','+(x.c+x.d[1]*i);sc.add(k);if(found.includes(x.w))fc.add(k);}});
+ let h='<div class="box"><h3>Word search</h3><p>Find the '+W.words.length+' key words. Words go across, down and diagonally (up or down, always left to right). Press the first letter, then the last letter.</p><div class="wsgrid" style="grid-template-columns:repeat('+W.N+',auto)" id="wsg">';
+ for(let r=0;r<W.N;r++)for(let c=0;c<W.N;c++){
+  const k=r+','+c;
+  let cls='wc'+(fc.has(k)?' f':'')+(sc.has(k)?' sol':'')+((wsSel&&wsSel.p===p.id&&wsSel.r===r&&wsSel.c===c)?' sel':'');
+  h+='<button class="'+cls+'" data-act="wc" data-r="'+r+'" data-c="'+c+'" aria-label="Row '+(r+1)+', column '+(c+1)+', letter '+W.g[r][c]+'">'+W.g[r][c]+'</button>';
+ }
+ h+='</div><div class="wsl">'+W.words.slice().sort().map(w=>'<span class="'+(found.includes(w)?'f':'')+'">'+w+'</span>').join('')+'</div>';
+ h+='<p class="small" id="wsmsg" role="status">'+found.length+' of '+W.words.length+' found.</p><div class="row no-print"><button class="btn ghost" data-act="wsreset" data-pid="'+p.id+'">Start again</button></div></div>';
+ return h;
+}
+function genCW(p){
+ if(p._cw)return p._cw;
+ const items=p.v.map(v=>({w:v.w.toUpperCase(),c:v.d}));
+ let best=null;
+ for(let at=0;at<150;at++){
+  const R=rng(p.id*104729+at*7919+11);
+  const order=items.slice().sort((a,b)=>(b.w.length-a.w.length)+(R()-0.5)*5);
+  const cells=new Map(),dm=new Map(),placed=[],done=new Set();
+  const key=(r,c)=>r+','+c;
+  const test=(w,r,c,d)=>{
+   const dr=d,dc=1-d;
+   if(cells.has(key(r-dr,c-dc))||cells.has(key(r+dr*w.length,c+dc*w.length)))return -1;
+   let inter=0;
+   for(let i=0;i<w.length;i++){
+    const rr=r+dr*i,cc=c+dc*i,k=key(rr,cc);
+    if(cells.has(k)){if(cells.get(k)!==w[i]||(dm.get(k)&(d?2:1)))return -1;inter++;}
+    else if(cells.has(key(rr+dc,cc+dr))||cells.has(key(rr-dc,cc-dr)))return -1;
+   }
+   return inter;
+  };
+  const put=(it,r,c,d)=>{for(let i=0;i<it.w.length;i++){const k=key(r+d*i,c+(1-d)*i);cells.set(k,it.w[i]);dm.set(k,(dm.get(k)||0)|(d?2:1));}placed.push({w:it.w,c:it.c,r,c0:c,d});done.add(it.w);};
+  put(order[0],0,0,0);
+  for(let pass=0;pass<3;pass++){
+   for(const it of order){
+    if(done.has(it.w))continue;
+    let cand=[],top=0;
+    cells.forEach((ch,k)=>{
+     const [r,c]=k.split(',').map(Number);
+     for(let i=0;i<it.w.length;i++)if(it.w[i]===ch)for(let d=0;d<2;d++){
+      const r0=r-d*i,c0=c-(1-d)*i,sc=test(it.w,r0,c0,d);
+      if(sc>=1){if(sc>top){top=sc;cand=[];}if(sc===top)cand.push([r0,c0,d]);}
+     }
+    });
+    if(cand.length){const x=cand[Math.floor(R()*cand.length)];put(it,x[0],x[1],x[2]);}
+   }
+  }
+  let r1=1e9,c1=1e9,r2=-1e9,c2=-1e9;
+  cells.forEach((v,k)=>{const [r,c]=k.split(',').map(Number);r1=Math.min(r1,r);c1=Math.min(c1,c);r2=Math.max(r2,r);c2=Math.max(c2,c);});
+  const area=(r2-r1+1)*(c2-c1+1),score=placed.length*1000-area;
+  if(!best||score>best.score)best={score,cells,dm,placed,r1,c1,r2,c2};
+ }
+ const B=best,rows=B.r2-B.r1+1,cols=B.c2-B.c1+1;
+ const grid=Array.from({length:rows},()=>Array(cols).fill(null));
+ B.cells.forEach((ch,k)=>{const [r,c]=k.split(',').map(Number);grid[r-B.r1][c-B.c1]={ch,dm:B.dm.get(k),n:0};});
+ const words=B.placed.map(x=>({w:x.w,c:x.c,r:x.r-B.r1,c0:x.c0-B.c1,d:x.d}));
+ let n=0;const across=[],down=[];
+ for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){
+  const a=words.find(x=>x.d===0&&x.r===r&&x.c0===c),d=words.find(x=>x.d===1&&x.r===r&&x.c0===c);
+  if(a||d){n++;grid[r][c].n=n;if(a)across.push({n,c:a.c,len:a.w.length,w:a.w,r,c0:c});if(d)down.push({n,c:d.c,len:d.w.length,w:d.w,r,c0:c});}
+ }
+ p._cw={grid,rows,cols,across,down,total:p.v.length,used:words.length};
+ return p._cw;
+}
+function cwHTML(p){
+ const C=genCW(p),sv=S.cw[p.id]||{};
+ let h='<div class="box"><h3>Crossword</h3><p>Type one letter in each box. Use the clues. Press a clue to jump to its first box.</p><div class="cwwrap"><table class="cw" id="cwt-'+p.id+'" role="grid" aria-label="Crossword"><tbody>';
+ for(let r=0;r<C.rows;r++){
+  h+='<tr>';
+  for(let c=0;c<C.cols;c++){
+   const x=C.grid[r][c];
+   if(!x)h+='<td class="cb"></td>';
+   else h+='<td class="cc">'+(x.n?'<span class="num">'+x.n+'</span>':'')+'<input class="cwi" maxlength="1" autocomplete="off" autocapitalize="characters" data-p="'+p.id+'" data-r="'+r+'" data-c="'+c+'" data-dm="'+x.dm+'" data-a="'+x.ch+'" value="'+esc(sv[r+','+c]||'')+'" aria-label="Row '+(r+1)+' column '+(c+1)+(x.n?' clue '+x.n:'')+'"><span class="sl">'+x.ch+'</span></td>';
+  }
+  h+='</tr>';
+ }
+ h+='</tbody></table></div>';
+ const cl=(L,dir)=>'<div><h4>'+dir+'</h4><ol>'+L.map(x=>'<li><button data-act="cwgo" data-r="'+x.r+'" data-c="'+x.c0+'" data-d="'+(dir==='Across'?1:2)+'"><b>'+x.n+'.</b> '+esc(x.c)+' ('+x.len+')</button></li>').join('')+'</ol></div>';
+ h+='<div class="clues">'+cl(C.across,'Across')+cl(C.down,'Down')+'</div>';
+ h+='<div class="row no-print"><button class="btn" data-act="cwcheck" data-pid="'+p.id+'">Check letters</button><button class="btn ghost" data-act="cwshow" data-pid="'+p.id+'">Show answers</button><button class="btn ghost" data-act="cwclear" data-pid="'+p.id+'">Clear</button></div></div>';
+ return h;
+}
+
+/* ---------- life skills and values ---------- */
+function lifeHTML(p){
+ let h='';
+ p.sk.forEach(s=>{
+  h+='<div class="box" style="margin-bottom:12px"><h3>Life skill: '+esc(s.n)+'</h3><p><b>What it covers.</b> '+esc(s.what)+'</p><p><b>First action to try.</b> '+esc(s.act)+'</p><p><b>Safety note.</b> '+esc(s.safe)+'</p></div>';
+ });
+ h+='<div class="media no-print"><div class="mrow">'+slot('img/life/'+PN(p)+'.png','img','Picture')+'</div></div>';
+ if(p.tip)h+='<div class="box" style="margin-bottom:12px"><h3>Try it at home</h3><p>'+esc(p.tip)+'</p></div>';
+ if(p.qr&&p.qr.length){
+  h+='<div class="box"><h3>Quran and hadith link</h3>';
+  p.qr.forEach((r,qx)=>{h+='<p><b>'+esc(r.ref)+'</b><br>'+esc(r.mean)+(r.note?'<br><span class="small">'+esc(r.note)+'</span>':'')+'</p>';});
+  h+='<p class="small">Meanings are given in short, close to the Sahih International wording where that translation was checked, or explained in plain words. They are not a replacement for the Arabic text. Please check with the school Islamic Studies teacher.</p></div>';
+ }
+ return h;
+}
+
+
+/* ---------- send marks to teacher ---------- */
+function reportText(inc){
+ const nm=(S.pname||'').trim()||'(name not entered)';
+ let L=['Marks report: '+nm,'Stage 5 Reading Comprehension pack','Date: '+new Date().toLocaleDateString('en-GB'),''];
+ let ts=0,tm=0,n=0;
+ P.forEach(p=>{
+  if(p.lk)return;const T=totals(p),wk=S['wk'+p.id],wt=(S.w[String(p.id)]||'').trim();
+  if(!T.got&&!wt)return;n++;
+  let line=p.id+'. '+p.t+': ';
+  line+=T.got?('questions '+T.s+' out of '+T.am+' ('+rag(T.s,T.am)[1]+', '+T.got+' of '+T.tot+' marked)'):'questions not started';
+  ts+=T.s;tm+=T.am;
+  if(wt){const r=markWriting(p,wt),sc=r.reduce((a,x)=>a+x.s,0);line+='; writing '+(wk?('check '+sc+' out of '+r.length*3):'not yet checked')+' ('+(wt.match(/\S+/g)||[]).length+' words)';}
+  L.push(line);
+  if(inc){p.q.forEach((q,i)=>{const a=S.o[p.id+'-'+i];if(q.k==='op'&&a&&a.trim())L.push('   Q'+(i+1)+' answer: '+a.trim());});if(wt)L.push('   Writing: '+wt);}
+ });
+ if(!n)L.push('No work completed yet.');
+ else{L.push('');L.push('Total for questions marked: '+ts+' out of '+tm);}
+ L.push('','Marks are a computer estimate. Please check against the model answers and rubric.');
+ return L.join('\n');
+}
+function sendHTML(){
+ const inc=!!S.pinc;
+ return '<div class="top no-print"><button class="btn ghost" data-act="home">Back to all passages</button></div><div class="box"><h3>Send marks to your teacher</h3>'
+ +'<p><label>Your name<br><input type="text" id="pname" value="'+esc(S.pname||'')+'" style="width:100%;max-width:360px;padding:8px;border:1px solid var(--line);border-radius:8px;font:inherit"></label></p>'
+ +'<p><label>Teacher email (optional)<br><input type="email" id="tmail" value="'+esc(S.tmail||'')+'" style="width:100%;max-width:360px;padding:8px;border:1px solid var(--line);border-radius:8px;font:inherit"></label></p>'
+ +'<p><label><input type="checkbox" id="pinc"'+(inc?' checked':'')+'> Include my written answers and writing</label></p>'
+ +'<textarea id="rtext" style="min-height:240px" aria-label="Report to send">'+esc(reportText(inc))+'</textarea>'
+ +'<div class="row no-print"><button class="btn" data-act="sendmail">Email it</button><button class="btn" data-act="sendwa">WhatsApp it</button><button class="btn ghost" data-act="sendcopy">Copy text</button></div>'
+ +'<p class="small" id="smsg" role="status">Email and WhatsApp open your own app with the message ready. Nothing is sent until you press send there. If the message is very long, use Copy text and paste it.</p></div>';
+}
+
+
+/* ---------- demo lock and parent guide ---------- */
+function lockMsg(t,m){document.getElementById('mT').textContent=t;document.getElementById('mP').textContent=m;document.getElementById('mBuy').href=BUY;document.getElementById('modal').hidden=false;const b=document.getElementById('mBuy');if(b)b.focus();}
+function parentsHTML(){
+ return '<div class="top no-print"><button class="btn ghost" data-act="home">Back to all passages</button><button class="btn" data-act="print">Print this guide</button></div>'
+ +'<div class="par"><div class="intro"><h2>For parents and carers</h2><p>You do not need to be an English expert. This page shows how to use the pack at home, how to help without giving the answers, and how to read the marks.</p></div>'
+ +'<div class="box"><h3>1. A simple routine for each passage</h3><p>Little and often works well. One passage can be done over two or three short sittings. These steps are a suggestion, not a rule.</p><ol>'
+ +'<li><b>Read together.</b> Let your child read the passage aloud, or press the audio button if it is there. Then ask: <i>What was it about?</i></li>'
+ +'<li><b>Check the key words.</b> The 10 highlighted words have a <b>?</b> button. It shows the meaning, the Arabic and sometimes a picture.</li>'
+ +'<li><b>Answer the 15 questions.</b> Your child writes or taps the answers. Choose-an-answer questions are marked straight away.</li>'
+ +'<li><b>Mark the written answers.</b> Press <b>Mark my answer</b>, read the advice, then press <b>Show model answer</b> and compare.</li>'
+ +'<li><b>Writing task.</b> Use the plan and the checklist. This is the most useful part for a child learning English.</li>'
+ +'<li><b>Games and life skill.</b> The word search and crossword practise spelling. The life skill tab is a short talk and one thing to try at home.</li></ol></div>'
+ +'<div class="box"><h3>2. How to help without giving the answer</h3><p>Try these questions instead of telling your child the answer:</p>'
+ +'<div class="say">Where in the text does it say that? Can you point to the sentence?</div>'
+ +'<div class="say">What does the word mean? Look at the words around it. Does it help?</div>'
+ +'<div class="say">Can you add a reason? Try starting with <i>because</i>.</div>'
+ +'<div class="say">Read your answer aloud. Does it start with a capital letter and end with a full stop?</div>'
+ +'<p>Praise effort and corrections: <i>You went back to the text. That is exactly what good readers do.</i></p></div>'
+ +'<div class="box"><h3>3. What the marks mean</h3><table><thead><tr><th>Colour</th><th>Meaning</th><th>What to do</th></tr></thead><tbody>'
+ +'<tr><td>Green</td><td>75% or more</td><td>Well done. Move on to the next passage.</td></tr>'
+ +'<tr><td>Amber</td><td>40% to 74%</td><td>Look at the advice lines and try again on the questions that were missed.</td></tr>'
+ +'<tr><td>Red</td><td>Under 40%</td><td>Read the passage again together, then try the questions one at a time.</td></tr></tbody></table>'
+ +'<p><b>Please remember:</b> choose-an-answer questions are marked exactly. Written answers and the writing check are marked by a computer that looks for key words and simple features. They are a guide, not a grade. A good answer in different words can lose marks, so always compare with the model answer. If you are unsure of any part, please check with your child\'s teacher.</p></div>'
+ +'<div class="box"><h3>4. Helpful buttons</h3><ul>'
+ +'<li><b>The round Arabic button</b> next to each question shows the question in Arabic. The Arabic was prepared for this pack and has not yet been checked by a fluent Arabic teacher, so use it as a help only.</li>'
+ +'<li><b>A- and A+</b> change the size of the text.</li><li><b>Print</b> makes a paper copy.</li>'
+ +'<li><b>Send my marks</b> opens your own email or WhatsApp with a short report, ready to send to a teacher. Nothing is sent until you press send in that app.</li></ul></div>'
+ +'<div class="box"><h3>5. Saving progress</h3><p>Answers and marks are saved only in this browser on this device. They are not sent anywhere. They can be lost if you clear the browser data or use a different phone or computer. Use <b>Send my marks</b> to keep a record.</p></div>'
+ +'<div class="box"><h3>6. When to talk to the teacher</h3><ul><li>Your child gets red on most passages over a week or two.</li><li>Your child finds most of the words very hard or is upset by the work.</li><li>You are not sure whether a mark is fair. Show the teacher the answer and the model answer.</li></ul></div>'
+ +'<div class="box"><h3>7. About the pack</h3><p>These are 20 original reading passages written for learners of English aged 9 to 10, depending on level. They practise the reading skills in Cambridge Primary English (0058) Stage 5. They are not produced or endorsed by Cambridge University Press &amp; Assessment, and they do not replace lessons from a teacher. Questions: <a href="https://fluentry-uk.com" target="_blank" rel="noopener">fluentry-uk.com</a></p></div></div>';
+}
+
+/* ---------- views ---------- */
+
+function moreHTML(){
+ const ps=id=>Object.keys(OBJ).filter(k=>OBJ[k].r.includes(id)||OBJ[k].w.includes(id)).join(', ');
+ const codes=[...new Set(Object.values(OBJ).flatMap(o=>o.r.concat(o.w)))].sort((a,b)=>{const k=c=>(c[1]==='R'?0:1)+'vgsica'.indexOf(c[2])+'vgscp'.indexOf(c[2])+c.slice(4);const o=c=>(c[1]==='R'?'0':'1')+(c[1]==='R'?'vgsia'.indexOf(c[2]):'vgscp'.indexOf(c[2]))+c.slice(4);return o(a)<o(b)?-1:1;});
+ const rows=c=>'<tr><td>'+c+'</td><td>'+esc(OBJW[c]||'')+'</td><td>'+ps(c)+'</td></tr>';
+ return '<details class="more"><summary>More info...</summary><div class="mi">'
+ +'<h3>Which framework is this based on?</h3><p><b>Cambridge Primary English 0058 Curriculum Framework</b> (Version 2.0, published September 2020 for first teaching September 2021), from Cambridge International. Look for the section <b>Learning objectives by stage, Stage 5</b> (pages 48 to 55 of that version). You can find it, and any updates, at <a href="https://www.cambridgeinternational.org/primary" target="_blank" rel="noopener">www.cambridgeinternational.org/primary</a>.</p>'
+ +'<h3>Age guide</h3><p>This pack gives an age guide of 9 to 10, depending on level. This matches the Cambridge table below, where <b>Stage 5 is ages 9 to 10</b>. Cambridge Primary English runs from Stage 1 to Stage 6, for ages 5 to 11.</p>'
+ +'<figure><a href="img/framework/stage5-age-stage-table.png" target="_blank" rel="noopener"><img src="img/framework/stage5-age-stage-table.png" alt="Cambridge table of ages and stages, with Stage 5 (age 9 to 10) highlighted" loading="lazy" onerror="this.closest(\'figure\').remove()"></a><figcaption>Screenshot 1. Page 5 of Cambridge\'s document \'Mapping Cambridge Primary English (Stages 1 to 6) to the US Common Core State Standards for English Language Arts (Kindergarten to Grade 5)\', version V1 20Y09. Stage 5 is highlighted. Tap the picture to enlarge.</figcaption></figure>'
+ +'<h3>Objectives these passages practise</h3><p><span class="key"></span>Yellow rows in the screenshot below are the Stage 5 objectives that at least one passage in this pack practises through its questions or its writing task. Rows that are not yellow are not practised here. The blue bands are part of the original Cambridge spreadsheet.</p>'
+ +'<figure><a href="img/framework/stage5-objectives-highlighted.png" target="_blank" rel="noopener"><img src="img/framework/stage5-objectives-highlighted.png" alt="Cambridge Primary English Stage 5 learning objectives with the objectives used in this pack highlighted in yellow" loading="lazy" onerror="this.closest(\'figure\').remove()"></a><figcaption>Screenshot 2. Cambridge Primary English 0058, Stage 5 learning objectives (Reading, Writing, Speaking and Listening), with this pack\'s objectives highlighted. Tap the picture to enlarge.</figcaption></figure>'
+ +'<table><thead><tr><th>Code</th><th>Objective (Cambridge wording)</th><th>Passages</th></tr></thead><tbody>'+codes.map(rows).join('')+'</tbody></table>'
+ +'<p class="small">An asterisk (*) before a code in the Cambridge document means the same objective also appears in another stage. Grammar questions such as tenses, adjectives, adverbs and command verbs practise grammar in general. They are not tied to one Stage 5 reading objective. The Speaking and Listening objectives are not tagged in this pack.</p>'
+ +'<p class="small">Objective wording is quoted from the Cambridge framework. This pack is original practice material. It is not produced or endorsed by Cambridge University Press &amp; Assessment. Please check cambridgeinternational.org for any updates.</p>'
+ +'</div></details>';
+}
+
+function homeHTML(){
+ const list=P.filter(p=>filt==='all'||p.c===filt);
+ let tot=0,done=0;P.forEach(p=>{if(p.lk)return;const s=stat(p);tot+=s.tot;done+=s.done;});
+ let h='<div class="intro"><h2>📚 20 Reading Passages based on Cambridge Primary 0058 English | Stage 5</h2><p class="agel">Age Guide 9-10 (Depending on level)</p>'+moreHTML()
+  +'<p class="namebox no-print"><label>My name <input type="text" id="hname" placeholder="Write your name here" value="'+esc(S.pname||'')+'" autocomplete="name"></label></p></div>'
+  +(DEMO?'<div class="demo"><b>Free demo.</b> '+P.filter(p=>!p.lk).length+' of '+P.length+' passages are open to try, with every feature: questions, automatic marking, writing task, word search, crossword, key word help and the parent guide. The other '+P.filter(p=>p.lk).length+' passages are in the full pack.<br><a class="btn" href="'+BUY+'" target="_blank" rel="noopener">Get the full pack on WhatsApp</a></div>':'')
+  +'<div class="filters" role="group" aria-label="Filter passages">'
+  +[['all','All '+P.length],['F','Stories, poetry and plays'],['N','Non-fiction']].map(f=>'<button class="chip" aria-pressed="'+(filt===f[0])+'" data-act="filt" data-v="'+f[0]+'">'+f[1]+'</button>').join('')
+  +'</div><div class="grid">';
+ list.forEach(p=>{
+  if(p.lk){h+='<button class="card lk" data-act="open" data-pid="'+p.id+'" aria-label="Passage '+p.id+', '+esc(p.t)+'. Locked. Tap to see how to unlock."><img class="cov" src="img/covers/'+PN(p)+'.png" alt="" loading="lazy" onerror="this.remove()"><span class="no">Passage '+p.id+'</span><h3>'+esc(p.t)+'</h3><span><span class="badge'+(p.c==='N'?' n':'')+'">'+esc(p.g)+'</span></span><span class="lkb">&#128274; Full pack only</span></button>';return;}
+  const s=stat(p);
+  h+='<button class="card" data-act="open" data-pid="'+p.id+'"><img class="cov" src="img/covers/'+PN(p)+'.png" alt="" loading="lazy" onerror="this.remove()"><span class="no">Passage '+p.id+'</span><h3>'+esc(p.t)+'</h3><span><span class="badge'+(p.c==='N'?' n':'')+'">'+esc(p.g)+'</span></span>'
+   +'<span class="small tonly">Life skill: '+esc(p.sk[0].n)+' | '+wcount(p.x)+' words</span><span class="small">'+s.done+' of '+s.tot+' questions done</span>'
+   +'<span class="meter" aria-hidden="true"><i style="width:'+(s.done/s.tot*100)+'%"></i></span></button>';
+ });
+ h+='</div>';
+ h+='<details class="about"><summary>About this pack, skills, sources and checks</summary>'
+  +'<p><b>Skills tagged.</b> Questions are tagged with the Cambridge Primary English (0058) Stage 5 reading objective they practise. This resource was made in November 2026. Please check against cambridgeinternational.org for any updates to codes. Codes and wording were checked against the Cambridge Primary English 0058 Curriculum Framework, Version 2.0.</p>'
+  +'<table><thead><tr><th>Tag</th><th>Objective wording (Stage 5)</th></tr></thead><tbody>'
+  +'<tr><td>Retrieval (5Ri.06)</td><td>Explore explicit meanings in a range of texts.</td></tr>'
+  +'<tr><td>Inference (5Ri.09, 5Ri.11)</td><td>Explore implicit meanings; make inferences from texts.</td></tr>'
+  +'<tr><td>Vocabulary (5Rv.01)</td><td>Deduce the meanings of unfamiliar words, including using context and knowledge of root words, prefixes and suffixes.</td></tr>'
+  +'<tr><td>Text structure (5Rs.02)</td><td>Explore and recognise the key features of text structure in a range of different fiction and non-fiction texts, including poems and playscripts.</td></tr>'
+  +'<tr><td>Grammar and punctuation (5Rg)</td><td>5Rg.01: direct and reported speech. 5Rg.02: clauses and connectives. 5Rg.03: types of nouns. Other grammar questions (tenses, adjectives, adverbs, command verbs) practise grammar in general.</td></tr>'
+  +'<tr><td>Personal response (5Ra.02)</td><td>Express personal responses to texts, including predictions, opinions and reflections.</td></tr>'
+  +'<tr><td>Link to life skills; Faith and values link</td><td>Added for this pack. They are not Cambridge objectives.</td></tr>'
+  +'</tbody></table>'
+  +''
+  +'<table><thead><tr><th>#</th><th>Passage</th><th>Life skill</th><th>Quran or hadith link</th></tr></thead><tbody>'
+  +P.filter(p=>!p.lk).map(p=>'<tr><td>'+p.id+'</td><td>'+esc(p.t)+'</td><td>'+esc(p.sk.map(s=>s.n).join('; '))+'</td><td>'+esc((p.qr||[]).map(r=>r.ref).join('; ')||'None')+'</td></tr>').join('')
+  +'</tbody></table>'
+  +'<p><b>Quran references.</b> Each verse was checked against an online copy of the text (mostly Sahih International as shown on surahquran.com; verses 3:159 and 21:30 were checked in other translations and are explained in plain words). The hadith (Sahih al-Bukhari 2320) was checked on sunnah.com. Verse 55:22 uses the word marjan, which many translations render as coral; some early scholars understood it as small pearls. This is noted where it is used.</p>'
+  +'<p><b>Originality.</b> Stories, the poem, the playscript, the diary, the letter and the news report are original and written for this pack. People and schools in them are invented. Non-fiction passages are original summaries of well-established facts. The honey rule for babies under one year follows NHS advice. The life-skill steps are general learning guidance. The radium product claims and the link between Marie Curie\'s illness and radiation are widely reported but were not re-checked against a primary source while building this pack, so please verify them before use.</p>'
+  +'<p><b>Level.</b> Passages are aimed at an age guide of 9-10, depending on level.</p>'
+  +'<p><button class="btn ghost" data-act="reset">Clear saved progress on this device</button></p></details>';
+ return h;
+}
+function passageHTML(p){
+ const s=stat(p);
+ let h='<div class="top no-print"><button class="btn ghost" data-act="home">Back to all passages</button><span class="small" id="pstat">'+pstatText(p)+'</span></div>';
+ h+='<div class="tabs no-print" role="tablist">'+TABS.map(t=>'<button class="tab" role="tab" data-act="tab" data-v="'+t[0]+'" aria-selected="'+(tab===t[0])+'">'+t[1]+'</button>').join('')+'</div>';
+ h+='<div class="panel p-read'+(tab==='read'?' on':'')+'"><div class="layout"><div class="leftcol"><article class="passage"><h2>'+esc(p.t)+'</h2><div class="meta"><span class="badge'+(p.c==='N'?' n':'')+'">'+esc(p.g)+'</span><span class="small">'+wcount(p.x)+' words</span></div>'+(p.note?'<p class="note">'+esc(p.note)+'</p>':'')+topMedia(p)+fmt(p)+''+vocabHTML(p)+'</article></div><section class="qs" aria-label="Questions"><div class="row no-print" style="margin:0"><button class="btn" data-act="clearread" data-pid="'+p.id+'">Try again (clear all answers)</button><button class="btn ghost" data-act="qall" data-v="1">Show all Arabic question translations</button><button class="btn ghost" data-act="qall" data-v="0">Hide all</button></div>';
+ p.q.forEach((q,i)=>{h+=qHTML(p,i);});
+ h+='<button class="fab no-print" data-act="totext" aria-label="Back to the text">&#8593; Text</button>';
+ h+='</section></div></div>';
+ h+='<div class="panel p-write'+(tab==='write'?' on':'')+'">'+writeHTML(p)+'</div>';
+ h+='<div class="panel p-ws'+(tab==='ws'?' on':'')+'" id="wsbox">'+wsHTML(p)+'</div>';
+ h+='<div class="panel p-cw'+(tab==='cw'?' on':'')+'" id="cwbox">'+cwHTML(p)+'</div>';
+ h+='<div class="panel p-life'+(tab==='life'?' on':'')+'">'+lifeHTML(p)+'</div>';
+ h+='<div class="row no-print" style="margin-top:14px">'+(p.id>1?'<button class="btn ghost" data-act="open" data-pid="'+(p.id-1)+'">Previous passage</button>':'')+(p.id<P.length?'<button class="btn" data-act="open" data-pid="'+(p.id+1)+'">Next passage</button>':'')+'</div>';
+ return h;
+}
+function keyHTML(){
+ let h='<div class="top no-print"><button class="btn ghost" data-act="home">Back to all passages</button><button class="btn" data-act="print">Print answer key</button></div><div class="intro"><h2>Answer key'+(DEMO?': demo passages':': all 20 passages')+'</h2><p>Written answers show a model answer. Other answers may also be correct if they use evidence from the text.</p></div>';
+ P.filter(p=>!p.lk).forEach(p=>{
+  h+='<div class="box" style="margin-bottom:12px"><h3>'+p.id+'. '+esc(p.t)+'</h3><ol>';
+  p.q.forEach(q=>{
+   const a=q.k==='mc'?(q.o.length>2?String.fromCharCode(65+q.a)+'. ':'')+esc(q.o[q.a]):'Model: '+esc(q.m);
+   h+='<li><b>'+SKT[q.s][0]+':</b> '+a+'</li>';
+  });
+  h+='</ol><p class="small"><b>Writing sample:</b> '+esc(p.wr.m)+'</p></div>';
+ });
+ return h;
+}
+const SHOWPH=true; /* set to false when all audio files are uploaded, to hide the grey placeholders */
+function updMedia(el){const m=el.closest('.media');if(m){m.classList.toggle('empty',!m.querySelector('.slot.ok'));}}
+function hydrate(){
+ document.querySelectorAll('.slot:not([data-h])').forEach(s=>{
+  s.dataset.h='1';const box=s.querySelector('.slotbox'),f=s.dataset.file;
+  const bad=()=>{if(SHOWPH&&s.dataset.kind==='aud'){const b=document.createElement('button');b.type='button';b.className='phbtn';b.disabled=true;b.setAttribute('aria-label','Audio coming soon');b.innerHTML='&#9654; Audio coming soon';box.appendChild(b);s.classList.add('ph','ok');}else s.classList.add('missing');updMedia(s);},good=el=>{box.appendChild(el);s.classList.add('ok');updMedia(s);};
+  if(s.dataset.kind==='img'){const im=new Image();im.alt='';im.onload=()=>good(im);im.onerror=bad;im.src=f;}
+  else{const L=[f.replace(/\.mp3$/,'.m4a'),f];let i=0;const a=document.createElement('audio');a.controls=true;a.preload='metadata';a.addEventListener('loadedmetadata',()=>good(a));a.addEventListener('error',()=>{i++;if(i<L.length)a.src=L[i];else bad();});a.src=L[0];}
+  updMedia(s);
+ });
+}
+document.addEventListener('click',()=>setTimeout(hydrate,0));
+function show(html){app().innerHTML=html;window.scrollTo(0,0);hydrate();}
+
+/* ---------- class tracker (teacher) ---------- */
+const TKEY='stage5-tracker-v1';
+let TR={g:[],cur:null,edit:null,msg:''};
+function trLoad(){try{const r=localStorage.getItem(TKEY);if(r){const o=JSON.parse(r);if(o&&Array.isArray(o.g))TR=Object.assign(TR,o);}}catch(e){}
+ if(!TR.g.length)trAddGroup('Group 1');if(!TR.cur||!TR.g.find(g=>g.id===TR.cur))TR.cur=TR.g[0].id;}
+function trSave(){try{localStorage.setItem(TKEY,JSON.stringify({g:TR.g,cur:TR.cur}));}catch(e){}}
+function trAddGroup(name){const id='g'+Date.now().toString(36)+Math.floor(Math.random()*1000);const n=[];for(let i=0;i<20;i++)n.push({n:'',m:{}});TR.g.push({id,name:name||('Group '+(TR.g.length+1)),n});TR.cur=id;}
+const trG=()=>TR.g.find(g=>g.id===TR.cur)||TR.g[0];
+function trSums(l){let s=0,a=0,ws=0,wa=0,np=0;Object.values(l.m||{}).forEach(m=>{if(m&&m.qa&&m.qs!=null){s+=m.qs;a+=m.qa;np++;}if(m&&m.wa&&m.ws!=null){ws+=m.ws;wa+=m.wa;}});return{s,a,ws,wa,np};}
+function trCell(m){return m&&m.qa&&m.qs!=null?m.qs+'/'+m.qa:'';}
+function trCellCls(m){return m&&m.qa&&m.qs!=null?' tr-'+rag(m.qs,m.qa)[0]:'';}
+function trTotalHTML(l){const t=trSums(l);if(!t.a)return '';const r=rag(t.s,t.a);return '<b>'+t.s+'/'+t.a+'</b> ('+Math.round(t.s/t.a*100)+'%)';}
+function trParse(txt){
+ const out={name:'',rows:{}};
+ txt.split(/\r?\n/).forEach(line=>{
+  let m=line.match(/^Marks report:\s*(.*)$/i);if(m){out.name=m[1].trim();return;}
+  m=line.match(/^(\d{1,2})\.\s.*?:\s*questions\s+(\d+)\s+out of\s+(\d+)(.*)$/);
+  if(m){const r={qs:+m[2],qa:+m[3]};const w=m[4].match(/writing check\s+(\d+)\s+out of\s+(\d+)/);if(w){r.ws=+w[1];r.wa=+w[2];}out.rows[+m[1]]=r;return;}
+  m=line.match(/^(\d{1,2})\.\s.*?:\s*questions not started(?:;\s*writing check\s+(\d+)\s+out of\s+(\d+))?/);
+  if(m&&m[2]){out.rows[+m[1]]={qs:0,qa:0,ws:+m[2],wa:+m[3]};}
+ });
+ return out;
+}
+function trAddReport(txt){
+ const r=trParse(txt),ids=Object.keys(r.rows);
+ if(!ids.length)return 'I could not find any marks in that text. Paste the whole report the learner sent.';
+ if(!r.name||/name not entered/i.test(r.name))return 'The report has no learner name. Ask the learner to type their name and send it again.';
+ const g=trG();const nm=r.name.toLowerCase();
+ let l=g.n.find(x=>x.n.trim().toLowerCase()===nm);
+ if(!l){l=g.n.find(x=>!x.n.trim());if(!l){l={n:'',m:{}};g.n.push(l);}l.n=r.name;}
+ ids.forEach(i=>{const x=r.rows[i],o=l.m[i]||{};l.m[i]=Object.assign({},o,x.qa?{qs:x.qs,qa:x.qa}:{},x.wa?{ws:x.ws,wa:x.wa}:{});});
+ trSave();return 'Added marks for '+r.name+' ('+ids.length+' passage'+(ids.length>1?'s':'')+').';
+}
+function trHTML(){
+ const g=trG();
+ let h='<div class="top no-print"><button class="btn ghost" data-act="home">Back to all passages</button><button class="btn ghost" data-act="trprint">Print</button></div>';
+ h+='<div class="box"><h2 style="margin:0 0 6px">Class tracker</h2><p class="small">For teachers. Learners press "Send marks to teacher". Paste each report below and the marks are added to the right name. Everything is saved only in this browser on this computer, so use "Download spreadsheet" to keep a copy.</p>';
+ h+='<div class="filters no-print" role="group" aria-label="Groups">'+TR.g.map(x=>'<button class="chip" aria-pressed="'+(x.id===g.id)+'" data-act="trgroup" data-id="'+x.id+'">'+esc(x.name||'Group')+'</button>').join('')+'<button class="chip" data-act="tradd">+ Add group</button></div>';
+ h+='<p class="no-print"><label>Group name <input type="text" id="trgname" value="'+esc(g.name)+'" style="padding:8px;border:1px solid var(--line);border-radius:8px;font:inherit;width:min(100%,260px)"></label> <button class="btn ghost" data-act="trdel" id="trdel">Delete this group</button></p>';
+ h+='<div class="no-print"><label for="trpaste"><b>Paste a learner\'s report</b></label><textarea id="trpaste" rows="5" placeholder="Paste the whole &quot;Marks report&quot; text here" style="width:100%;margin:6px 0;padding:8px;border:1px solid var(--line);border-radius:8px;font:inherit"></textarea><div class="row"><button class="btn" data-act="trpaste">Add these marks</button><span class="small" id="trmsg" role="status">'+esc(TR.msg||'')+'</span></div></div></div>';
+ h+='<div class="box"><div class="trwrap"><table class="trt"><thead><tr><th>#</th><th>Learner</th>';
+ for(let i=1;i<=P.length;i++)h+='<th title="'+esc(P[i-1].t)+'">P'+i+'</th>';
+ h+='<th>Questions total</th><th class="no-print"></th></tr></thead><tbody>';
+ g.n.forEach((l,i)=>{
+  h+='<tr><td>'+(i+1)+'</td><td><input type="text" class="trn" data-tr="name" data-i="'+i+'" value="'+esc(l.n)+'" aria-label="Learner '+(i+1)+' name" placeholder="Name"></td>';
+  for(let p=1;p<=P.length;p++){const m=(l.m||{})[p];h+='<td class="trc'+trCellCls(m)+'" id="trc-'+i+'-'+p+'">'+trCell(m)+'</td>';}
+  h+='<td id="trt-'+i+'">'+trTotalHTML(l)+'</td><td class="no-print"><button class="btn ghost trb" data-act="tredit" data-i="'+i+'">'+(TR.edit===i?'Close':'Edit marks')+'</button></td></tr>';
+ });
+ // averages
+ h+='<tr class="tra"><td></td><td><b>Group average</b></td>';
+ for(let p=1;p<=P.length;p++){let s=0,a=0;g.n.forEach(l=>{const m=(l.m||{})[p];if(m&&m.qa&&m.qs!=null){s+=m.qs/m.qa;a++;}});h+='<td>'+(a?Math.round(s/a*100)+'%':'')+'</td>';}
+ h+='<td></td><td class="no-print"></td></tr></tbody></table></div>';
+ h+='<div class="row no-print" style="margin-top:10px"><button class="btn" data-act="trlearner">+ Add learner</button><button class="btn ghost" data-act="trlearner5">+ Add 5 learners</button><button class="btn ghost" data-act="trcsv">Download spreadsheet (CSV)</button></div>';
+ h+='<p class="small">'+g.n.length+' places in this group. Colours: green 75% or more, amber 40 to 74%, red under 40%. Marks are computer estimates.</p></div>';
+ if(TR.edit!=null&&g.n[TR.edit]){h+=trEditHTML(g.n[TR.edit],TR.edit);}
+ return h;
+}
+function trEditHTML(l,i){
+ let h='<div class="box" id="tredit"><h3>Marks for '+esc(l.n||('learner '+(i+1)))+'</h3><p class="small">Type marks for each passage. Leave blank if not done. Questions are normally out of 19 and writing out of 12.</p><div class="treg">';
+ for(let p=1;p<=P.length;p++){const m=(l.m||{})[p]||{};
+  h+='<fieldset class="trf"><legend>P'+p+' '+esc(P[p-1].t)+'</legend><label>Questions <input type="number" min="0" data-tr="qs" data-i="'+i+'" data-p="'+p+'" value="'+(m.qs!=null?m.qs:'')+'"> / <input type="number" min="0" data-tr="qa" data-i="'+i+'" data-p="'+p+'" value="'+(m.qa||'')+'" placeholder="19"></label>'
+   +'<label>Writing <input type="number" min="0" data-tr="ws" data-i="'+i+'" data-p="'+p+'" value="'+(m.ws!=null?m.ws:'')+'"> / <input type="number" min="0" data-tr="wa" data-i="'+i+'" data-p="'+p+'" value="'+(m.wa||'')+'" placeholder="12"></label></fieldset>';}
+ return h+'</div></div>';
+}
+function trCSV(){
+ const g=trG(),q=v=>'"'+String(v).replace(/"/g,'""')+'"';
+ const hd=['Group','Learner'];for(let p=1;p<=P.length;p++){hd.push('P'+p+' questions','P'+p+' writing');}hd.push('Questions total','Out of','Percent');
+ const rows=[hd.map(q).join(',')];
+ g.n.forEach(l=>{if(!l.n.trim()&&!Object.keys(l.m||{}).length)return;const t=trSums(l);const r=[g.name,l.n];
+  for(let p=1;p<=P.length;p++){const m=(l.m||{})[p]||{};r.push(m.qa&&m.qs!=null?m.qs+'/'+m.qa:'',m.wa&&m.ws!=null?m.ws+'/'+m.wa:'');}
+  r.push(t.s,t.a,t.a?Math.round(t.s/t.a*100)+'%':'');rows.push(r.map(q).join(','));});
+ return '﻿'+rows.join('\r\n');
+}
+function showTracker(){curId=null;show(trHTML());}
+function home(){curId=null;show(homeHTML());}
+function openP(id,keepTab){const p=getP(id);if(!p)return;if(p.lk){lockMsg(p.t+' (Passage '+p.id+')','This passage is in the full pack. It has 15 questions with automatic marking, a writing task with a rubric, a word search, a crossword, key word help with Arabic, and a life skill. Try the open passages free.');return;}curId=id;if(!keepTab)tab='read';wsSel=null;show(passageHTML(p));}
+function refresh(pid,qi){
+ const el=document.getElementById('q-'+pid+'-'+qi);
+ if(el){el.outerHTML=qHTML(getP(pid),qi);}
+ const t=document.getElementById('pstat');
+ if(t){t.innerHTML=pstatText(getP(pid));}
+}
+function applyPrefs(){
+ document.documentElement.style.setProperty('--fs',S.fs+'rem');
+ document.body.classList.toggle('teacher',!!S.teacher);
+ const b=document.getElementById('tbT');if(b)b.setAttribute('aria-pressed',String(!!S.teacher));
+}
+function placePop(b,po){
+ po.style.visibility='hidden';po.style.left='0px';po.style.top='0px';
+ const r=b.getBoundingClientRect(),w=po.offsetWidth,h=po.offsetHeight,vw=window.innerWidth,vh=window.innerHeight;
+ let x=Math.min(Math.max(8,r.left),Math.max(8,vw-w-8));
+ let y=r.bottom+6;if(y+h>vh-8&&r.top-h-6>8)y=r.top-h-6;
+ po.style.left=x+'px';po.style.top=Math.max(8,y)+'px';po.style.visibility='';
+}
+window.addEventListener('resize',()=>closePops(null));
+document.addEventListener('scroll',()=>closePops(null),true);
+function closePops(except){
+ document.querySelectorAll('.pop').forEach(po=>{
+  if(po===except)return;
+  po.hidden=true;
+  const b=po._btn;if(b)b.setAttribute('aria-expanded','false');
+  if(po.parentNode===document.body){
+   if(po._home&&po._home.isConnected)po._home.appendChild(po);else po.remove();
+  }
+ });
+}
+function rerender(id,fn){const el=document.getElementById(id);if(el&&curId){el.innerHTML=fn(getP(curId));}}
+
+/* ---------- events ---------- */
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-act]');
+ if(!e.target.closest('.tmenu')||(b&&e.target.closest('.tmenu-in'))){const tm=document.querySelector('details.tmenu');if(tm)tm.open=false;}
+ if(!b){closePops();return;}
+ const act=b.dataset.act,pid=+b.dataset.pid,qi=+b.dataset.qi;
+ if(act!=='kw')closePops();
+ if(act==='home'){home();}
+ else if(act==='parents'){curId=null;show(parentsHTML());}
+ else if(act==='mclose'){document.getElementById('modal').hidden=true;}
+ else if(act==='open'){openP(pid);}
+ else if(act==='key'){show(keyHTML());}
+ else if(act==='track'){if(DEMO){lockMsg('Class tracker','The class tracker is part of the full pack. It keeps marks for groups of up to 20 learners and lets teachers paste in the marks reports that learners send.');return;}trLoad();TR.edit=null;TR.msg='';showTracker();}
+ else if(act==='trgroup'){TR.cur=b.dataset.id;TR.edit=null;TR.msg='';trSave();showTracker();}
+ else if(act==='tradd'){trAddGroup();TR.edit=null;trSave();showTracker();}
+ else if(act==='trdel'){if(b.dataset.sure){TR.g=TR.g.filter(x=>x.id!==TR.cur);if(!TR.g.length)trAddGroup('Group 1');TR.cur=TR.g[0].id;TR.edit=null;trSave();showTracker();}else{b.dataset.sure='1';b.textContent='Press again to delete this group and its marks';}}
+ else if(act==='trpaste'){const ta=document.getElementById('trpaste');TR.msg=trAddReport(ta?ta.value:'');showTracker();}
+ else if(act==='trlearner'){trG().n.push({n:'',m:{}});trSave();showTracker();}
+ else if(act==='trlearner5'){for(let k=0;k<5;k++)trG().n.push({n:'',m:{}});trSave();showTracker();}
+ else if(act==='tredit'){const i=+b.dataset.i;TR.edit=(TR.edit===i?null:i);showTracker();if(TR.edit!=null){const e=document.getElementById('tredit');if(e&&e.scrollIntoView)e.scrollIntoView({block:'start'});}}
+ else if(act==='trcsv'){try{const bl=new Blob([trCSV()],{type:'text/csv;charset=utf-8'}),u=URL.createObjectURL(bl),a=document.createElement('a');a.href=u;a.download='class-tracker-'+(trG().name||'group').replace(/[^\w]+/g,'-')+'.csv';document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(u);a.remove();},500);}catch(e){}}
+ else if(act==='trprint'){window.print();}
+ else if(act==='send'){curId=null;show(sendHTML());}
+ else if(act==='sendmail'||act==='sendwa'||act==='sendcopy'){
+  const tx=document.getElementById('rtext').value,msg=document.getElementById('smsg');
+  if(act==='sendcopy'){let ok=false;try{if(navigator.clipboard){navigator.clipboard.writeText(tx);ok=true;}}catch(e){}if(!ok){const r=document.getElementById('rtext');r.select();try{ok=document.execCommand('copy');}catch(e){}}msg.textContent=ok?'Copied. Paste it into a message to your teacher.':'Could not copy automatically. Select the text and copy it.';}
+  else if(act==='sendmail'){const to=encodeURIComponent((S.tmail||'').trim());window.location.href='mailto:'+to+'?subject='+encodeURIComponent('Reading comprehension marks: '+((S.pname||'').trim()||'pupil'))+'&body='+encodeURIComponent(tx);}
+  else{window.open('https://wa.me/?text='+encodeURIComponent(tx),'_blank');}
+ }
+ else if(act==='filt'){filt=b.dataset.v;home();}
+ else if(act==='teacher'){S.teacher=!S.teacher;save();applyPrefs();}
+ else if(act==='fsp'){S.fs=Math.min(1.5,+(S.fs+0.1).toFixed(2));save();applyPrefs();}
+ else if(act==='fsm'){S.fs=Math.max(0.9,+(S.fs-0.1).toFixed(2));save();applyPrefs();}
+ else if(act==='print'){window.print();}
+ else if(act==='reset'){if(confirm('Clear all saved answers and progress on this device?')){S=Object.assign(S,{a:{},o:{},w:{},wc:{},ws:{},cw:{}});save();home();}}
+ else if(act==='tab'){
+  tab=b.dataset.v;
+  document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected',String(t.dataset.v===tab)));
+  document.querySelectorAll('.panel').forEach(pn=>pn.classList.toggle('on',pn.classList.contains('p-'+tab)));
+ }
+ else if(act==='totext'){const el=document.querySelector('.leftcol');if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'});}
+ else if(act==='qar'){const k=b.dataset.k,pp=+k.split('-')[0],ii=+k.split('-')[1];QA[k]=!QA[k];refresh(pp,ii);}
+ else if(act==='qall'){getP(curId).q.forEach((_,i)=>{QA[curId+'-'+i]=(b.dataset.v==='1');refresh(curId,i);});}
+ else if(act==='kw'){
+  const po=b._pop||b.parentNode.querySelector('.pop');b._pop=po;po._btn=b;if(!po._home)po._home=b.parentNode;
+  const willOpen=po.hidden;
+  closePops(po);po.hidden=!willOpen;b.setAttribute('aria-expanded',String(willOpen));
+  if(willOpen){document.body.appendChild(po);hydrate();placePop(b,po);}
+ }
+ else if(act==='vk'){const bd=b.parentNode.querySelector('.vbody');bd.hidden=!bd.hidden;b.setAttribute('aria-expanded',String(!bd.hidden));}
+ else if(act==='vall'||act==='vnone'){document.querySelectorAll('.vk').forEach(v=>{v.querySelector('.vbody').hidden=(act==='vnone');v.querySelector('.vq').setAttribute('aria-expanded',String(act==='vall'));});}
+ else if(act==='check'){
+  const p=getP(pid),q=p.q[qi],s=st(pid,qi);
+  if(typeof s.sel!=='number'){s.warn=true;}
+  else{s.done=true;s.ok=(s.sel===q.a);s.warn=false;}
+  save();refresh(pid,qi);
+ }
+ else if(act==='retry'){const s=st(pid,qi);s.done=false;s.ok=false;s.warn=false;s.sel=null;save();refresh(pid,qi);}
+ else if(act==='clearread'){
+  if(confirm('Clear all your answers and marks for this passage?')){
+   delete S.a[pid];Object.keys(S.o).forEach(k=>{if(k.startsWith(pid+'-'))delete S.o[k];});save();openP(pid,true);}
+ }
+ else if(act==='clearwrite'){
+  if(confirm('Clear your writing, checklist and marks for this passage?')){
+   delete S.w[pid];Object.keys(S.wc).forEach(k=>{if(k.startsWith(pid+'-'))delete S.wc[k];});delete S['wk'+pid];delete S['wm'+pid];save();openP(pid,true);}
+ }
+ else if(act==='mark'){const q=getP(pid).q[qi],s=st(pid,qi);s.mk=markOpen(q,S.o[pid+'-'+qi]||'');save();refresh(pid,qi);}
+ else if(act==='model'){const s=st(pid,qi);s.show=!s.show;save();refresh(pid,qi);}
+ else if(act==='wmark'){S['wk'+pid]=true;save();const el=document.getElementById('wmark-'+pid);if(el)el.innerHTML=markHTML(getP(pid),String(pid));}
+ else if(act==='wmodel'){const k='wm'+pid;S[k]=!S[k];save();rerender2(pid);}
+ else if(act==='wc'){
+  const W=genWS(getP(curId)),r=+b.dataset.r,c=+b.dataset.c;
+  if(!wsSel||wsSel.p!==curId){wsSel={p:curId,r,c};}
+  else{
+   const r1=wsSel.r,c1=wsSel.c;wsSel=null;
+   const dr=r-r1,dc=c-c1;let msg='That is not one of the words.';
+   if(dr===0&&dc===0){msg='Pick the last letter of a word.';}
+   else if(dr===0||dc===0||Math.abs(dr)===Math.abs(dc)){
+    const len=Math.max(Math.abs(dr),Math.abs(dc))+1,sr=Math.sign(dr),sc=Math.sign(dc);
+    let str='';for(let i=0;i<len;i++)str+=W.g[r1+sr*i][c1+sc*i];
+    const rev=str.split('').reverse().join('');
+    const hit=W.words.find(w=>w===str||w===rev);
+    if(hit){const f=S.ws[curId]=S.ws[curId]||[];if(!f.includes(hit)){f.push(hit);msg='Found: '+hit;}else msg='You already found '+hit+'.';save();}
+   }
+   rerender('wsbox',wsHTML);
+   const m=document.getElementById('wsmsg');if(m&&msg)m.textContent=msg+' '+(S.ws[curId]||[]).length+' of '+W.words.length+' found.';
+   return;
+  }
+  rerender('wsbox',wsHTML);
+ }
+ else if(act==='wsreset'){S.ws[pid]=[];wsSel=null;save();rerender('wsbox',wsHTML);}
+ else if(act==='cwgo'){
+  cwDir=+b.dataset.d;
+  const t=document.querySelector('#cwt-'+curId+' .cwi[data-r="'+b.dataset.r+'"][data-c="'+b.dataset.c+'"]');if(t)t.focus();
+ }
+ else if(act==='cwcheck'){
+  document.querySelectorAll('#cwt-'+pid+' .cwi').forEach(i=>{i.classList.remove('ok','bad');if(i.value){i.classList.add(i.value.toUpperCase()===i.dataset.a?'ok':'bad');}});
+ }
+ else if(act==='cwshow'){document.getElementById('cwt-'+pid).closest('.box').classList.toggle('cwshow');}
+ else if(act==='cwclear'){S.cw[pid]={};save();rerender('cwbox',cwHTML);}
+});
+function rerender2(pid){const pn=document.querySelector('.panel.p-write');if(pn)pn.innerHTML=writeHTML(getP(pid));}
+document.addEventListener('change',e=>{
+ const r=e.target;
+ if(r.dataset&&r.dataset.tr){const g=trG(),l=g.n[+r.dataset.i];if(!l)return;
+  if(r.dataset.tr==='name'){l.n=r.value;trSave();return;}
+  const p=+r.dataset.p;l.m=l.m||{};const m=l.m[p]=l.m[p]||{};const k=r.dataset.tr,v=r.value===''?null:Math.max(0,+r.value);
+  if(v===null)delete m[k];else m[k]=v;
+  if(k==='qs'&&m.qs!=null&&m.qa==null){m.qa=19;}
+  if(k==='ws'&&m.ws!=null&&m.wa==null){m.wa=12;}
+  const sib=document.querySelector('[data-tr="'+(k==='qs'?'qa':k==='ws'?'wa':'')+'"][data-i="'+r.dataset.i+'"][data-p="'+p+'"]');if(sib&&(k==='qs'||k==='ws')&&sib.value==='')sib.value=(k==='qs'?m.qa:m.wa)||'';
+  if(!Object.keys(m).length)delete l.m[p];trSave();
+  const c=document.getElementById('trc-'+r.dataset.i+'-'+p),mm=l.m[p];if(c){c.textContent=trCell(mm);c.className='trc'+trCellCls(mm);}
+  const t=document.getElementById('trt-'+r.dataset.i);if(t)t.innerHTML=trTotalHTML(l);
+  return;}
+ if(r.id==='pinc'){S.pinc=r.checked;save();const x=document.getElementById('rtext');if(x)x.value=reportText(S.pinc);return;}
+ if(r.matches&&r.matches('input[data-media]')){
+  const f=r.files&&r.files[0],box=document.getElementById('m-'+r.dataset.media);if(!f||!box)return;
+  const u=URL.createObjectURL(f);
+  box.innerHTML=r.dataset.media.startsWith('img')?'<img alt="Chosen picture" src="'+u+'">':'<audio controls src="'+u+'"></audio>';
+  return;
+ }
+ if(r.matches('input[type=radio][data-pid]')){const s=st(+r.dataset.pid,+r.dataset.qi);s.sel=+r.value;s.warn=false;save();}
+ else if(r.matches('input[data-wc]')){S.wc[r.dataset.wc]=r.checked;save();}
+});
+document.addEventListener('input',e=>{
+ const t=e.target;
+ if(t.id==='trgname'){const g=trG();g.name=t.value;trSave();const ch=document.querySelector('.chip[data-id="'+g.id+'"]');if(ch)ch.textContent=g.name||'Group';return;}
+ if(t.id==='hname'){S.pname=t.value;save();return;}
+ if(t.id==='pname'||t.id==='tmail'){S[t.id==='pname'?'pname':'tmail']=t.value;save();const r=document.getElementById('rtext');if(r)r.value=reportText(!!S.pinc);return;}
+ if(t.matches('textarea[data-o]')){S.o[t.dataset.o]=t.value;save();}
+ else if(t.matches('textarea[data-w]')){S.w[t.dataset.w]=t.value;save();const c=document.getElementById('wcnt-'+t.dataset.w);if(c)c.textContent=wcount(t.value);}
+ else if(t.classList&&t.classList.contains('cwi')){
+  const v=t.value.replace(/[^a-zA-Z]/g,'').toUpperCase().slice(-1);t.value=v;
+  const pid=+t.dataset.p;S.cw[pid]=S.cw[pid]||{};S.cw[pid][t.dataset.r+','+t.dataset.c]=v;save();
+  t.classList.remove('ok','bad');
+  if(v)cwMove(t,1);
+ }
+});
+function cwMove(t,step){
+ const dm=+t.dataset.dm;let d=cwDir;
+ if(dm===1)d=1;else if(dm===2)d=2;
+ const r=+t.dataset.r+(d===2?step:0),c=+t.dataset.c+(d===1?step:0);
+ const n=document.querySelector('#cwt-'+t.dataset.p+' .cwi[data-r="'+r+'"][data-c="'+c+'"]');
+ if(n)n.focus();
+}
+document.addEventListener('focusin',e=>{const t=e.target;if(t.classList&&t.classList.contains('cwi')){const dm=+t.dataset.dm;if(dm===1)cwDir=1;else if(dm===2)cwDir=2;}});
+document.addEventListener('keydown',e=>{
+ const t=e.target;
+ if(e.key==='Escape'){closePops();return;}
+ if(!(t.classList&&t.classList.contains('cwi')))return;
+ const mv={ArrowRight:[0,1],ArrowLeft:[0,-1],ArrowDown:[1,0],ArrowUp:[-1,0]}[e.key];
+ if(mv){
+  if(mv[1]!==0)cwDir=1;else cwDir=2;
+  const n=document.querySelector('#cwt-'+t.dataset.p+' .cwi[data-r="'+(+t.dataset.r+mv[0])+'"][data-c="'+(+t.dataset.c+mv[1])+'"]');
+  if(n){n.focus();e.preventDefault();}
+ }else if(e.key==='Backspace'&&!t.value){cwMove(t,-1);}
+});
+
+load();applyPrefs();home();
+</script>
+</body>
+</html>
